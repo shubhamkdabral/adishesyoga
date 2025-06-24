@@ -13,7 +13,7 @@ class OurTeams extends Resource
      *
      * @var class-string<\App\Models\OurTeams>
      */
-    public static $model = \App\Models\OurTeams::class;
+    public static $model = \App\Models\OurTeam::class;
 
     /**
      * The single value that should be used to represent the resource when being displayed.
