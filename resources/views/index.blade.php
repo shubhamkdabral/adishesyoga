@@ -93,7 +93,7 @@
     <div class="container">
         <div class="gallery-slider">
             <div class="gallery-track">
-                @foreach ($imageSlider as $item)    
+                @foreach ($imageSlider as $item)
                 <div class="gallery-slide">
                     <img src="{{ $item->getFirstMediaUrl('image-slider')  ?: '/placeholder.svg?height=250&width=350' }}" alt="{{ $item->title }}">
                     <div class="gallery-overlay">
@@ -124,99 +124,49 @@
             <p>Discover our carefully crafted retreat programs designed to rejuvenate your mind, body, and soul.</p>
         </div>
         <div class="programs-container">
-            <div class="program-card featured">
-                <div class="section-mandala programs-mandala-right"></div>
+            @foreach($retreat as $index => $program)
+            <div class="program-card {{ $index === 0 ? 'featured' : '' }}">
+                <div class="section-mandala {{ $index % 2 === 0 ? 'programs-mandala-left' : 'programs-mandala-right' }}"></div>
+
+                @if($index === 0)
                 <div class="program-badge">Most Popular</div>
+                @endif
+
                 <div class="program-image">
-                    <img src="/placeholder.svg?height=280&width=400" alt="Weekend Retreat">
+                    <img src="{{ $program->getUploadedMedia()?->getUrl() ?? '/placeholder.svg' }}" alt="{{ $program->title }}">
                     <div class="program-image-overlay"></div>
                 </div>
+
                 <div class="program-content">
                     <div class="program-header">
-                        <h3>Weekend Wellness Retreat</h3>
+                        <h3>{{ $program->title }}</h3>
                         <div class="program-price">
-                            <span class="price-amount">$299</span>
+                            <span class="price-amount">₹ {{ number_format($program->price, 2) }}</span>
                             <span class="price-period">per person</span>
                         </div>
                     </div>
+
                     <div class="program-duration">
                         <i class="fas fa-clock"></i>
-                        <span>2 Days Program</span>
+                        <span>{{ $program->program_in_days }} Days Program</span>
                     </div>
-                    <p>A short but powerful 2-day retreat to reset and recharge. Perfect for busy professionals
-                        seeking balance and tranquility.</p>
+
+                    <p>{{ Str::limit(strip_tags($program->description), 160) }}</p>
+
+                    {{-- Optional static features or you can add dynamic ones --}}
                     <ul class="program-features">
                         <li><i class="fas fa-leaf"></i> Daily yoga sessions</li>
                         <li><i class="fas fa-moon"></i> Meditation workshops</li>
                         <li><i class="fas fa-utensils"></i> Organic meals included</li>
                     </ul>
-                    <a href="#" class="btn btn-primary">
+
+                    <a href="" class="btn {{ $program->button_type === 'primary' ? 'btn-primary' : 'btn-outline' }}">
                         <i class="fas fa-calendar-check"></i>
-                        <span>Book Now</span>
+                        <span>{{ $program->button_text ?? 'Book Now' }}</span>
                     </a>
                 </div>
             </div>
-            <div class="program-card">
-                <div class="section-mandala programs-mandala-left"></div>
-                <div class="program-image">
-                    <img src="/placeholder.svg?height=280&width=400" alt="Week-long Immersion">
-                    <div class="program-image-overlay"></div>
-                </div>
-                <div class="program-content">
-                    <div class="program-header">
-                        <h3>Week-long Immersion</h3>
-                        <div class="program-price">
-                            <span class="price-amount">$899</span>
-                            <span class="price-period">per person</span>
-                        </div>
-                    </div>
-                    <div class="program-duration">
-                        <i class="fas fa-clock"></i>
-                        <span>7 Days Program</span>
-                    </div>
-                    <p>Dive deep into yoga practices with our 7-day immersive retreat in a peaceful natural setting.
-                    </p>
-                    <ul class="program-features">
-                        <li><i class="fas fa-om"></i> Advanced yoga training</li>
-                        <li><i class="fas fa-mountain"></i> Nature excursions</li>
-                        <li><i class="fas fa-spa"></i> Spa treatments</li>
-                    </ul>
-                    <a href="#" class="btn btn-outline">
-                        <i class="fas fa-info-circle"></i>
-                        <span>Learn More</span>
-                    </a>
-                </div>
-            </div>
-            <div class="program-card">
-                <div class="section-mandala programs-mandala-right"></div>
-                <div class="program-image">
-                    <img src="/placeholder.svg?height=280&width=400" alt="Meditation Intensive">
-                    <div class="program-image-overlay"></div>
-                </div>
-                <div class="program-content">
-                    <div class="program-header">
-                        <h3>Meditation Intensive</h3>
-                        <div class="program-price">
-                            <span class="price-amount">$649</span>
-                            <span class="price-period">per person</span>
-                        </div>
-                    </div>
-                    <div class="program-duration">
-                        <i class="fas fa-clock"></i>
-                        <span>5 Days Program</span>
-                    </div>
-                    <p>Focus on mindfulness and meditation techniques in this specialized 5-day retreat.</p>
-                    <ul class="program-features">
-                        <li><i class="fas fa-peace"></i> Silent meditation</li>
-                        <li><i class="fas fa-wind"></i> Breathing techniques</li>
-                        <li><i class="fas fa-brain"></i> Mindfulness training</li>
-                    </ul>
-                    <a href="#" class="btn btn-outline">
-                        <i class="fas fa-info-circle"></i>
-                        <span>Learn More</span>
-                    </a>
-                </div>
-            </div>
+            @endforeach
         </div>
         <div class="view-all">
             <a href="#" class="btn btn-primary btn-large">
@@ -243,42 +193,22 @@
             <div class="divider"></div>
             <p>Discover what makes our yoga retreats unique and transformative.</p>
         </div>
+
         <div class="features-container">
+            @foreach($whyChooseUs as $feature)
             <div class="feature-card">
                 <div class="feature-icon">
-                    <i class="fas fa-certificate"></i>
+                    {{-- Use icon class from DB or fallback --}}
+                    <i class="{{ $feature->icon_class ?? 'fas fa-check-circle' }}"></i>
                 </div>
-                <h3>Certified Instructors</h3>
-                <p>All our yoga instructors are internationally certified with years of teaching experience and deep
-                    knowledge of various yoga traditions.</p>
+                <h3>{{ $feature->title }}</h3>
+                <p>{!!$feature->description!!}</p>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-mountain"></i>
-                </div>
-                <h3>Serene Locations</h3>
-                <p>Our retreats are held in carefully selected peaceful and natural environments that enhance your
-                    spiritual journey.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-users"></i>
-                </div>
-                <h3>Small Group Sizes</h3>
-                <p>We maintain small groups to ensure personalized attention and guidance for each participant's
-                    unique needs.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-leaf"></i>
-                </div>
-                <h3>Organic Cuisine</h3>
-                <p>Enjoy nutritious, organic meals prepared by our expert chefs using locally sourced ingredients
-                    during your stay.</p>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>
+
 
 <!-- Our Stays Section -->
 <section class="our-stays">
@@ -295,12 +225,14 @@
             <div class="divider"></div>
             <p>Experience comfort and tranquility in our carefully selected retreat locations.</p>
         </div>
+
         <div class="stays-container">
+            @foreach($stays as $stay)
             <div class="stay-card">
                 <div class="stay-image">
-                    <img src="/placeholder.svg?height=300&width=400" alt="Mountain Retreat Center">
+                    <img src="{{ $stay->media->first()?->getUrl() ?? '/placeholder.svg' }}" alt="{{ $stay->title }}">
                     <div class="stay-overlay">
-                        <a href="#" class="view-gallery">
+                        <a href="" class="view-gallery">
                             <i class="fas fa-images"></i>
                             <span>View Gallery</span>
                         </a>
@@ -309,11 +241,12 @@
                 <div class="stay-content">
                     <div class="stay-location">
                         <i class="fas fa-map-marker-alt"></i>
-                        <span>Himalayan Foothills</span>
+                        <span>{{ $stay->location }}</span>
                     </div>
-                    <h3>Mountain Retreat Center</h3>
-                    <p>Nestled in the serene Himalayan foothills, this retreat center offers breathtaking mountain
-                        views and peaceful surroundings.</p>
+                    <h3>{{ $stay->title }}</h3>
+                    <p>{!! $stay->description !!}</p>
+
+                    {{-- Static amenities for now --}}
                     <div class="stay-amenities">
                         <span><i class="fas fa-wifi"></i> Free WiFi</span>
                         <span><i class="fas fa-spa"></i> Spa Services</span>
@@ -321,56 +254,7 @@
                     </div>
                 </div>
             </div>
-            <div class="stay-card">
-                <div class="stay-image">
-                    <img src="/placeholder.svg?height=300&width=400" alt="Beachside Yoga Villa">
-                    <div class="stay-overlay">
-                        <a href="#" class="view-gallery">
-                            <i class="fas fa-images"></i>
-                            <span>View Gallery</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="stay-content">
-                    <div class="stay-location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Coastal Paradise</span>
-                    </div>
-                    <h3>Beachside Yoga Villa</h3>
-                    <p>Wake up to the sound of ocean waves in our beautiful beachside villa, perfect for sunrise
-                        yoga sessions.</p>
-                    <div class="stay-amenities">
-                        <span><i class="fas fa-swimming-pool"></i> Pool Access</span>
-                        <span><i class="fas fa-umbrella-beach"></i> Beach Front</span>
-                        <span><i class="fas fa-dumbbell"></i> Fitness Center</span>
-                    </div>
-                </div>
-            </div>
-            <div class="stay-card">
-                <div class="stay-image">
-                    <img src="/placeholder.svg?height=300&width=400" alt="Forest Sanctuary">
-                    <div class="stay-overlay">
-                        <a href="#" class="view-gallery">
-                            <i class="fas fa-images"></i>
-                            <span>View Gallery</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="stay-content">
-                    <div class="stay-location">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Sacred Forest</span>
-                    </div>
-                    <h3>Forest Sanctuary</h3>
-                    <p>Immerse yourself in nature at our forest sanctuary, surrounded by ancient trees and natural
-                        healing energy.</p>
-                    <div class="stay-amenities">
-                        <span><i class="fas fa-tree"></i> Nature Trails</span>
-                        <span><i class="fas fa-fire"></i> Fire Ceremonies</span>
-                        <span><i class="fas fa-om"></i> Meditation Halls</span>
-                    </div>
-                </div>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>
@@ -393,183 +277,47 @@
         </div>
         <div class="team-slider">
             <div class="team-track">
-                <!-- Original slides -->
+                @foreach($ourteam as $member)
                 <div class="team-card">
                     <div class="team-image">
-                        <img src="/placeholder.svg?height=300&width=250" alt="Priya Sharma">
+                        <img src="{{ $member->getFirstMediaUrl('team') ?? '/placeholder.svg?height=300&width=250' }}"
+                            alt="{{ $member->name }}">
                         <div class="team-overlay">
                             <div class="team-social">
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-facebook"></i></a>
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
+                                @if($member->instagram)
+                                <a href="{{ $member->instagram }}"><i class="fab fa-instagram"></i></a>
+                                @endif
+                                @if($member->facebook)
+                                <a href="{{ $member->facebook }}"><i class="fab fa-facebook"></i></a>
+                                @endif
+                                @if($member->linkedin)
+                                <a href="{{ $member->linkedin }}"><i class="fab fa-linkedin"></i></a>
+                                @endif
                             </div>
                         </div>
                     </div>
                     <div class="team-content">
-                        <h3>Priya Sharma</h3>
-                        <span class="team-role">Lead Yoga Instructor</span>
-                        <div class="team-experience">15+ Years Experience</div>
-                        <p>Certified in Hatha and Vinyasa yoga with specialization in meditation and pranayama
-                            techniques.</p>
+                        <h3>{{ $member->name }}</h3>
+                        <span class="team-role">{{ $member->designation }}</span>
+                        <div class="team-experience">{{ $member->experience }} Experience</div>
+                        <p>{{ Str::limit(trim(strip_tags(html_entity_decode($member->description))), 160) }}</p>
                         <div class="team-specialties">
-                            <span>Hatha Yoga</span>
-                            <span>Meditation</span>
-                            <span>Pranayama</span>
+                            @if($member->title_1)<span>{{ $member->title_1 }}</span>@endif
+                            @if($member->title_2)<span>{{ $member->title_2 }}</span>@endif
+                            @if($member->title_3)<span>{{ $member->title_3 }}</span>@endif
                         </div>
                     </div>
                 </div>
-                <div class="team-card">
-                    <div class="team-image">
-                        <img src="/placeholder.svg?height=300&width=250" alt="Arjun Patel">
-                        <div class="team-overlay">
-                            <div class="team-social">
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-facebook"></i></a>
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <h3>Arjun Patel</h3>
-                        <span class="team-role">Ashtanga Specialist</span>
-                        <div class="team-experience">12+ Years Experience</div>
-                        <p>Expert in Ashtanga and Power Yoga with deep knowledge of traditional yoga philosophy and
-                            anatomy.</p>
-                        <div class="team-specialties">
-                            <span>Ashtanga</span>
-                            <span>Power Yoga</span>
-                            <span>Philosophy</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="team-card">
-                    <div class="team-image">
-                        <img src="/placeholder.svg?height=300&width=250" alt="Maya Singh">
-                        <div class="team-overlay">
-                            <div class="team-social">
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-facebook"></i></a>
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <h3>Maya Singh</h3>
-                        <span class="team-role">Yin & Restorative Expert</span>
-                        <div class="team-experience">10+ Years Experience</div>
-                        <p>Specializes in Yin Yoga and restorative practices with certification in yoga therapy and
-                            sound healing.</p>
-                        <div class="team-specialties">
-                            <span>Yin Yoga</span>
-                            <span>Restorative</span>
-                            <span>Sound Healing</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="team-card">
-                    <div class="team-image">
-                        <img src="/placeholder.svg?height=300&width=250" alt="Ravi Kumar">
-                        <div class="team-overlay">
-                            <div class="team-social">
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-facebook"></i></a>
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <h3>Ravi Kumar</h3>
-                        <span class="team-role">Meditation Master</span>
-                        <div class="team-experience">20+ Years Experience</div>
-                        <p>Master of various meditation techniques including Vipassana, Mindfulness, and traditional
-                            Vedic practices.</p>
-                        <div class="team-specialties">
-                            <span>Vipassana</span>
-                            <span>Mindfulness</span>
-                            <span>Vedic Practices</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="team-card">
-                    <div class="team-image">
-                        <img src="/placeholder.svg?height=300&width=250" alt="Ananya Gupta">
-                        <div class="team-overlay">
-                            <div class="team-social">
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-facebook"></i></a>
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <h3>Ananya Gupta</h3>
-                        <span class="team-role">Prenatal & Family Yoga</span>
-                        <div class="team-experience">8+ Years Experience</div>
-                        <p>Certified in prenatal yoga and family practices, helping mothers and families connect
-                            through yoga.</p>
-                        <div class="team-specialties">
-                            <span>Prenatal</span>
-                            <span>Family Yoga</span>
-                            <span>Kids Yoga</span>
-                        </div>
-                    </div>
-                </div>
+                @endforeach
+            </div>
 
-                <!-- Duplicate first two slides for infinite loop -->
-                <div class="team-card clone">
-                    <div class="team-image">
-                        <img src="/placeholder.svg?height=300&width=250" alt="Priya Sharma">
-                        <div class="team-overlay">
-                            <div class="team-social">
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-facebook"></i></a>
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <h3>Priya Sharma</h3>
-                        <span class="team-role">Lead Yoga Instructor</span>
-                        <div class="team-experience">15+ Years Experience</div>
-                        <p>Certified in Hatha and Vinyasa yoga with specialization in meditation and pranayama
-                            techniques.</p>
-                        <div class="team-specialties">
-                            <span>Hatha Yoga</span>
-                            <span>Meditation</span>
-                            <span>Pranayama</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="team-card clone">
-                    <div class="team-image">
-                        <img src="/placeholder.svg?height=300&width=250" alt="Arjun Patel">
-                        <div class="team-overlay">
-                            <div class="team-social">
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-facebook"></i></a>
-                                <a href="#"><i class="fab fa-linkedin"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <h3>Arjun Patel</h3>
-                        <span class="team-role">Ashtanga Specialist</span>
-                        <div class="team-experience">12+ Years Experience</div>
-                        <p>Expert in Ashtanga and Power Yoga with deep knowledge of traditional yoga philosophy and
-                            anatomy.</p>
-                        <div class="team-specialties">
-                            <span>Ashtanga</span>
-                            <span>Power Yoga</span>
-                            <span>Philosophy</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            {{-- Optional pagination dots --}}
             <div class="team-dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
+                @for($i = 0; $i < ceil(count($ourteam) / 3); $i++)
+                    <span class="dot {{ $i == 0 ? 'active' : '' }}"></span>
+                    @endfor
             </div>
+
             <div class="slider-nav">
                 <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
                 <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
@@ -596,161 +344,46 @@
         </div>
         <div class="testimonial-slider">
             <div class="testimonial-track">
-                <!-- Original testimonials -->
+                @foreach ($reviews as $review)
                 <div class="testimonial-card">
                     <div class="testimonial-header">
                         <div class="testimonial-image">
-                            <img src="/placeholder.svg?height=60&width=60" alt="Sarah Johnson">
+                            <img src="{{ $review->getFirstMediaUrl('review') ?? asset('/placeholder.svg?height=60&width=60') }}"
+                                alt="{{ $review->name }}">
                         </div>
                         <div class="testimonial-info">
-                            <h4>Sarah Johnson</h4>
-                            <span>Marketing Executive</span>
+                            <h4>{{ $review->name }}</h4>
+                            <span>{{ $review->designation }}</span>
                             <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p>"The weekend retreat was exactly what I needed. The instructors were knowledgeable and
-                        supportive, and I left feeling refreshed and centered."</p>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="testimonial-image">
-                            <img src="/placeholder.svg?height=60&width=60" alt="Michael Chen">
-                        </div>
-                        <div class="testimonial-info">
-                            <h4>Michael Chen</h4>
-                            <span>Software Developer</span>
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p>"I've attended many yoga retreats, but Serenity Yoga's week-long immersion was by far the
-                        most transformative. The location was breathtaking."</p>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="testimonial-image">
-                            <img src="/placeholder.svg?height=60&width=60" alt="Emma Rodriguez">
-                        </div>
-                        <div class="testimonial-info">
-                            <h4>Emma Rodriguez</h4>
-                            <span>Teacher</span>
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p>"The meditation intensive retreat helped me develop a consistent practice that I've
-                        maintained for months. The techniques I learned have been invaluable for managing stress."
-                    </p>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="testimonial-image">
-                            <img src="/placeholder.svg?height=60&width=60" alt="David Kumar">
-                        </div>
-                        <div class="testimonial-info">
-                            <h4>David Kumar</h4>
-                            <span>Entrepreneur</span>
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p>"Amazing experience! The combination of yoga, meditation, and the beautiful natural setting
-                        created the perfect environment for healing."</p>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-header">
-                        <div class="testimonial-image">
-                            <img src="/placeholder.svg?height=60&width=60" alt="Lisa Thompson">
-                        </div>
-                        <div class="testimonial-info">
-                            <h4>Lisa Thompson</h4>
-                            <span>Nurse</span>
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p>"The personalized attention and small group size made all the difference. I felt supported
-                        throughout my entire journey."</p>
-                </div>
+                                @php
+                                $rating = (int) $review->rating; // ensure it's an integer
+                                @endphp
 
-                <!-- Duplicate first two testimonials for infinite loop -->
-                <div class="testimonial-card clone">
-                    <div class="testimonial-header">
-                        <div class="testimonial-image">
-                            <img src="/placeholder.svg?height=60&width=60" alt="Sarah Johnson">
-                        </div>
-                        <div class="testimonial-info">
-                            <h4>Sarah Johnson</h4>
-                            <span>Marketing Executive</span>
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
+                                <div class="stars">
+                                    @for ($i = 1; $i <= 5; $i++)
+                                        <i class="fas fa-star {{ $i <= $rating ? 'text-warning' : 'text-muted' }}"></i>
+                                        @endfor
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <p>"The weekend retreat was exactly what I needed. The instructors were knowledgeable and
-                        supportive, and I left feeling refreshed and centered."</p>
+                    <p>"{{ $review->description }}"</p>
                 </div>
-                <div class="testimonial-card clone">
-                    <div class="testimonial-header">
-                        <div class="testimonial-image">
-                            <img src="/placeholder.svg?height=60&width=60" alt="Michael Chen">
-                        </div>
-                        <div class="testimonial-info">
-                            <h4>Michael Chen</h4>
-                            <span>Software Developer</span>
-                            <div class="stars">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
-                        </div>
-                    </div>
-                    <p>"I've attended many yoga retreats, but Serenity Yoga's week-long immersion was by far the
-                        most transformative. The location was breathtaking."</p>
-                </div>
+                @endforeach
             </div>
+
             <div class="testimonial-dots">
-                <span class="dot active"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
+                @for ($i = 0; $i < ceil(count($reviews) / 3); $i++)
+                    <span class="dot {{ $i == 0 ? 'active' : '' }}"></span>
+                    @endfor
             </div>
+
             <div class="slider-nav">
                 <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
                 <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
             </div>
         </div>
+
     </div>
 </section>
 

@@ -1,0 +1,36 @@
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('arrival_departures', function (Blueprint $table) {
+            $table->id();
+            $table->foreignId('retreat_id')->constrained('retreats')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->string('check_in');
+            $table->string('nearest_airpot');
+            $table->string('airpot_transfer');
+            $table->string('by_train');
+            $table->string('check_out');
+            $table->string('airport_transfer_departure');
+            $table->string('late_departure');
+            $table->string('extending_your_stay');
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('arrival_departures');
+    }
+};

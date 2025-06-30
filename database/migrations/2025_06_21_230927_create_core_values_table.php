@@ -16,7 +16,7 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('description');
-            $table->enum('icon', CoreValuesEnum::asArray());
+            $table->text('icon');
             $table->timestamps();
         });
     }

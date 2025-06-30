@@ -14,11 +14,19 @@ return new class extends Migration
     {
         Schema::create('retreats', function (Blueprint $table) {
             $table->id();
+            $table->string('banner_title');
+            $table->string('banner_heading');
+            $table->string('banner_short_description');
             $table->string('title');
+            $table->string('slug');
+            $table->string('short_description');
             $table->text('description');
+            $table->string('retreat_name');
             $table->integer('program_in_days');
             $table->integer('price');
+            $table->integer('total_person');
             $table->string('button_text');
+            $table->string('address');
             $table->enum('button_type', RetreatButtonTypeEnum::asArray());
             $table->timestamps();
         });

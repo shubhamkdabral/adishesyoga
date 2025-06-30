@@ -2,8 +2,11 @@
 
 namespace App\Nova;
 
+use Ebess\AdvancedNovaMediaLibrary\Fields\Media;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class OurTeams extends Resource
@@ -29,6 +32,11 @@ class OurTeams extends Resource
      */
     public static $search = [
         'id',
+        'name',
+        'designation',
+        'title_1',
+        'title_2',
+        'title_3'
     ];
 
     /**
@@ -37,10 +45,54 @@ class OurTeams extends Resource
      * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
      * @return array
      */
+
     public function fields(NovaRequest $request)
     {
         return [
-            ID::make()->sortable(),
+            Text::make('Name')
+                ->sortable()
+                ->rules('required', 'max:255'),
+
+            Text::make('Designation')
+                ->rules('required', 'max:255'),
+
+            Textarea::make('Description')
+                ->rules('required'),
+
+            Text::make('Experience')
+                ->rules('required', 'max:255'),
+
+            Text::make('Title 1', 'title_1')
+                ->nullable()
+                ->hideFromIndex(),
+
+            Text::make('Title 2', 'title_2')
+                ->nullable()
+                ->hideFromIndex(),
+
+            Text::make('Title 3', 'title_3')
+                ->nullable()
+                ->hideFromIndex(),
+
+            Text::make('Facebook')
+                ->nullable()
+                ->hideFromIndex(),
+
+            Text::make('Twitter')
+                ->nullable()
+                ->hideFromIndex(),
+
+            Text::make('Instagram')
+                ->nullable()
+                ->hideFromIndex(),
+
+            Text::make('LinkedIn')
+                ->nullable()
+                ->hideFromIndex(),
+
+            Media::make('Banner Image', 'banner'),
+
+            Media::make('Image', 'team'),
         ];
     }
 

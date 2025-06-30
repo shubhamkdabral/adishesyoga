@@ -8,6 +8,16 @@ class ContactUs extends Controller
 {
     public function index()
     {
-        return view('contact-us');
+        return view('privacy-policy');
+    }
+
+    public function privacyPolicy()
+    {
+        return view('privacy-policy');
+    }
+
+    public function refundPolicy()
+    {
+        return view('refund-policy');
     }
 }

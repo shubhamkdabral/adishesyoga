@@ -4,6 +4,8 @@ namespace App\Nova;
 
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Trix;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class WhyChooseUs extends Resource
@@ -40,7 +42,16 @@ class WhyChooseUs extends Resource
     public function fields(NovaRequest $request)
     {
         return [
-            ID::make()->sortable(),
+
+            Text::make('Title')
+                ->sortable()
+                ->rules('required', 'max:255'),
+
+            Trix::make('Description')->alwaysShow(),
+
+            Text::make('Icon')
+                ->sortable()
+                ->rules('required', 'max:255'),
         ];
     }
 

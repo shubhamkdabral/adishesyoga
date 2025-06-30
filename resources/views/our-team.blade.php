@@ -63,175 +63,70 @@
 <section class="our-teams">
     <div class="section-mandala teams-mandala-top-right"></div>
     <div class="container">
-        <!-- First Teacher -->
-        <div
-            style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 5rem;">
+        @foreach ($ourteam as $index => $member)
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 5rem;">
+            @if ($index % 2 === 0)
+            {{-- Text Left, Image Right --}}
             <div>
-                <span
-                    style="display: inline-block; background: var(--accent-color); color: white; padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.875rem; font-weight: 600; margin-bottom: 1rem;">
-                    Lead Guru
+                <span style="display: inline-block; background: var(--accent-color); color: white; padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.875rem; font-weight: 600; margin-bottom: 1rem;">
+                    {{ $member->designation }}
                 </span>
-                <h3 style="font-size: 2rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif;">Swami
-                    Anand Prakash</h3>
-                <div
-                    style="width: 60px; height: 3px; background: linear-gradient(90deg, var(--primary-color), var(--primary-light)); margin-bottom: 1.5rem; border-radius: 2px;">
-                </div>
+                <h3 style="font-size: 2rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif;">{{ $member->name }}</h3>
+                <div style="width: 60px; height: 3px; background: linear-gradient(90deg, var(--primary-color), var(--primary-light)); margin-bottom: 1.5rem; border-radius: 2px;"></div>
                 <p style="font-size: 1.125rem; color: var(--text-light); margin-bottom: 1.5rem; line-height: 1.7;">
-                    With over 30 years of experience in traditional Hatha and Raja yoga, Swami Anand Prakash is our
-                    spiritual guide and lead teacher. After spending 15 years in the Himalayas studying under
-                    renowned
-                    masters, he brings profound wisdom and authentic teaching methods to Adishesh Yoga.
-                </p>
-                <p style="font-size: 1.125rem; color: var(--text-light); margin-bottom: 1.5rem; line-height: 1.7;">
-                    Swami ji specializes in meditation techniques, pranayama, and yoga philosophy. His gentle
-                    approach and
-                    deep understanding of yogic texts make complex spiritual concepts accessible to all
-                    practitioners.
+                    {!! $member->description !!}
                 </p>
                 <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.5rem;">
-                    <span
-                        style="background: white; color: var(--primary-color); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.875rem; font-weight: 500; border: 1px solid var(--border-light);">
-                        Meditation
+                    @foreach (explode(',', $member->specializations) as $skill)
+                    <span style="background: white; color: var(--primary-color); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.875rem; font-weight: 500; border: 1px solid var(--border-light);">
+                        {{ trim($skill) }}
                     </span>
-                    <span
-                        style="background: white; color: var(--primary-color); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.875rem; font-weight: 500; border: 1px solid var(--border-light);">
-                        Pranayama
-                    </span>
-                    <span
-                        style="background: white; color: var(--primary-color); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.875rem; font-weight: 500; border: 1px solid var(--border-light);">
-                        Yoga Philosophy
-                    </span>
-                    <span
-                        style="background: white; color: var(--primary-color); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.875rem; font-weight: 500; border: 1px solid var(--border-light);">
-                        Hatha Yoga
-                    </span>
+                    @endforeach
                 </div>
             </div>
             <div>
                 <div style="position: relative;">
-                    <img src="/placeholder.svg?height=500&width=400" alt="Swami Anand Prakash"
+                    <img src="{{ $member->media->first()->getUrl() }}" alt="{{ $member->name }}"
                         style="width: 100%; height: 500px; object-fit: cover; border-radius: 15px; box-shadow: var(--shadow-medium);">
-                    <div
-                        style="position: absolute; bottom: 1rem; right: 1rem; background: white; padding: 0.75rem; border-radius: 10px; box-shadow: var(--shadow-light); display: flex; align-items: center; gap: 0.75rem;">
-                        <span style="color: var(--primary-color); font-weight: 600;">30+ Years Experience</span>
+                    <div style="position: absolute; bottom: 1rem; right: 1rem; background: white; padding: 0.75rem; border-radius: 10px; box-shadow: var(--shadow-light); display: flex; align-items: center; gap: 0.75rem;">
+                        <span style="color: var(--primary-color); font-weight: 600;">{{ $member->experience }}+ Years Experience</span>
                     </div>
                 </div>
             </div>
-        </div>
-
-        <!-- Second Teacher -->
-        <div
-            style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 5rem;">
+            @else
+            {{-- Image Left, Text Right --}}
             <div>
                 <div style="position: relative;">
-                    <img src="/placeholder.svg?height=500&width=400" alt="Maya Sharma"
+                    <img src="{{ $member->media->first()->getUrl()  }}" alt="{{ $member->name }}"
                         style="width: 100%; height: 500px; object-fit: cover; border-radius: 15px; box-shadow: var(--shadow-medium);">
-                    <div
-                        style="position: absolute; bottom: 1rem; right: 1rem; background: white; padding: 0.75rem; border-radius: 10px; box-shadow: var(--shadow-light); display: flex; align-items: center; gap: 0.75rem;">
-                        <span style="color: var(--primary-color); font-weight: 600;">15+ Years Experience</span>
+                    <div style="position: absolute; bottom: 1rem; right: 1rem; background: white; padding: 0.75rem; border-radius: 10px; box-shadow: var(--shadow-light); display: flex; align-items: center; gap: 0.75rem;">
+                        <span style="color: var(--primary-color); font-weight: 600;">{{ $member->experience }}+ Years Experience</span>
                     </div>
                 </div>
             </div>
             <div>
-                <span
-                    style="display: inline-block; background: var(--secondary-color); color: white; padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.875rem; font-weight: 600; margin-bottom: 1rem;">
-                    Asana Specialist
+                <span style="display: inline-block; background: var(--secondary-color); color: white; padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.875rem; font-weight: 600; margin-bottom: 1rem;">
+                    {{ $member->designation }}
                 </span>
-                <h3 style="font-size: 2rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif;">Maya
-                    Sharma</h3>
-                <div
-                    style="width: 60px; height: 3px; background: linear-gradient(90deg, var(--primary-color), var(--primary-light)); margin-bottom: 1.5rem; border-radius: 2px;">
-                </div>
+                <h3 style="font-size: 2rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif;">{{ $member->name }}</h3>
+                <div style="width: 60px; height: 3px; background: linear-gradient(90deg, var(--primary-color), var(--primary-light)); margin-bottom: 1.5rem; border-radius: 2px;"></div>
                 <p style="font-size: 1.125rem; color: var(--text-light); margin-bottom: 1.5rem; line-height: 1.7;">
-                    Maya brings grace and precision to her teaching, with certifications in Iyengar and Vinyasa
-                    yoga. A
-                    former dancer, she emphasizes proper alignment and the flowing nature of movement in her
-                    classes.
-                </p>
-                <p style="font-size: 1.125rem; color: var(--text-light); margin-bottom: 1.5rem; line-height: 1.7;">
-                    Her approach combines traditional asana practice with modern anatomical understanding, making
-                    her
-                    classes both challenging and accessible. Maya specializes in helping students with physical
-                    limitations
-                    find modifications that work for their bodies.
+                    {!! $member->description !!}
                 </p>
                 <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.5rem;">
-                    <span
-                        style="background: white; color: var(--primary-color); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.875rem; font-weight: 500; border: 1px solid var(--border-light);">
-                        Iyengar Yoga
+                    @foreach (explode(',', $member->specializations) as $skill)
+                    <span style="background: white; color: var(--primary-color); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.875rem; font-weight: 500; border: 1px solid var(--border-light);">
+                        {{ trim($skill) }}
                     </span>
-                    <span
-                        style="background: white; color: var(--primary-color); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.875rem; font-weight: 500; border: 1px solid var(--border-light);">
-                        Vinyasa Flow
-                    </span>
-                    <span
-                        style="background: white; color: var(--primary-color); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.875rem; font-weight: 500; border: 1px solid var(--border-light);">
-                        Alignment
-                    </span>
-                    <span
-                        style="background: white; color: var(--primary-color); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.875rem; font-weight: 500; border: 1px solid var(--border-light);">
-                        Anatomy
-                    </span>
+                    @endforeach
                 </div>
             </div>
+            @endif
         </div>
-
-        <!-- Third Teacher -->
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center;">
-            <div>
-                <span
-                    style="display: inline-block; background: var(--primary-light); color: white; padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.875rem; font-weight: 600; margin-bottom: 1rem;">
-                    Meditation Expert
-                </span>
-                <h3 style="font-size: 2rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif;">Dr. Arjun
-                    Patel</h3>
-                <div
-                    style="width: 60px; height: 3px; background: linear-gradient(90deg, var(--primary-color), var(--primary-light)); margin-bottom: 1.5rem; border-radius: 2px;">
-                </div>
-                <p style="font-size: 1.125rem; color: var(--text-light); margin-bottom: 1.5rem; line-height: 1.7;">
-                    Dr. Arjun combines his background in neuroscience with extensive training in mindfulness and
-                    meditation
-                    practices. His evidence-based approach helps students understand the scientific benefits of yoga
-                    while
-                    experiencing its spiritual dimensions.
-                </p>
-                <p style="font-size: 1.125rem; color: var(--text-light); margin-bottom: 1.5rem; line-height: 1.7;">
-                    He leads our meditation retreats and specialized workshops on stress reduction and mental
-                    clarity. Dr.
-                    Arjun's calm presence and clear instruction make meditation accessible even to beginners.
-                </p>
-                <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.5rem;">
-                    <span
-                        style="background: white; color: var(--primary-color); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.875rem; font-weight: 500; border: 1px solid var(--border-light);">
-                        Mindfulness
-                    </span>
-                    <span
-                        style="background: white; color: var(--primary-color); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.875rem; font-weight: 500; border: 1px solid var(--border-light);">
-                        Vipassana
-                    </span>
-                    <span
-                        style="background: white; color: var(--primary-color); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.875rem; font-weight: 500; border: 1px solid var(--border-light);">
-                        Yoga Nidra
-                    </span>
-                    <span
-                        style="background: white; color: var(--primary-color); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.875rem; font-weight: 500; border: 1px solid var(--border-light);">
-                        Stress Reduction
-                    </span>
-                </div>
-            </div>
-            <div>
-                <div style="position: relative;">
-                    <img src="/placeholder.svg?height=500&width=400" alt="Dr. Arjun Patel"
-                        style="width: 100%; height: 500px; object-fit: cover; border-radius: 15px; box-shadow: var(--shadow-medium);">
-                    <div
-                        style="position: absolute; bottom: 1rem; right: 1rem; background: white; padding: 0.75rem; border-radius: 10px; box-shadow: var(--shadow-light); display: flex; align-items: center; gap: 0.75rem;">
-                        <span style="color: var(--primary-color); font-weight: 600;">12+ Years Experience</span>
-                    </div>
-                </div>
-            </div>
-        </div>
+        @endforeach
     </div>
 </section>
+
 
 <!-- Call to Action -->
 <section class="cta">

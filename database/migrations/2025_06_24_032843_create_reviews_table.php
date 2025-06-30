@@ -13,17 +13,10 @@ return new class extends Migration
     {
         Schema::create('reviews', function (Blueprint $table) {
             $table->id();
-            $table->string('banner_title');
-            $table->string('banner_heading');
-            $table->string('banner_short_description');
-            $table->string('title');
-            $table->string('short_description');
+            $table->string('name');
+            $table->string('designation');
+            $table->integer('rating');
             $table->text('description');
-            $table->string('retreat_name');
-            $table->string('days');
-            $table->float('price');
-            $table->integer('total_person');
-            $table->string('location');
             $table->timestamps();
         });
     }

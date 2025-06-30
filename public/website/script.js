@@ -651,3 +651,4 @@ document.addEventListener("DOMContentLoaded", () => {
 
   floatingElements.forEach((element, index) => { })
 })
+

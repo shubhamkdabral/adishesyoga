@@ -37,12 +37,25 @@
                            </a>
                            <ul class="dropdown-menu">
                                <li><a href="{{ route('who-we-are') }}" class="{{ Route::currentRouteName() === 'who-we-are' ? 'active' : '' }}">Who We Are</a></li>
+                               <li><a href="{{ route('founders') }}" class="{{ Route::currentRouteName() === 'founders' ? 'active' : '' }}">Our Founders</a></li>
+                               <li><a href="{{ route('our-teacher') }}" class="{{ Route::currentRouteName() === 'our-teacher' ? 'active' : '' }}">Our Teachers</a></li>
                                <li><a href="{{ route('food-and-accommodation') }}" class="{{ Route::currentRouteName() === 'food-and-accommodation' ? 'active' : '' }}">Food and Accommodation</a></li>
+                               <li><a href="{{ route('privacy-policy') }}" class="{{ Route::currentRouteName() === 'privacy-policy' ? 'active' : '' }}">Privacy Policy</a></li>
                            </ul>
                        </li>
 
-                       <li><a href="{{ route('our-team') }}" class="{{ Route::currentRouteName() === 'our-team' ? 'active' : '' }}">Teams</a></li>
-                       <li><a href="{{ route('retreats') }}" class="{{ Route::currentRouteName() === 'retreats' ? 'active' : '' }}">Retreat Programs</a></li>
+                       <li class="nav-dropdown">
+                           <a href="#" class="dropdown-toggle {{ in_array(Route::currentRouteName(), ['who-we-are', 'food-and-accommodation']) ? 'active' : '' }}">
+                               Retreat Programs
+                               <i class="fas fa-chevron-down dropdown-arrow"></i>
+                           </a>
+                           <ul class="dropdown-menu">
+                               <li><a href="{{ route('himalayan-hiking') }}" class="{{ Route::currentRouteName() === 'himalayan-hiking' ? 'active' : '' }}">9 Day Himalayan Hiking Yoga</a></li>
+                               <li><a href="{{ route('kundalini-yoga') }}" class="{{ Route::currentRouteName() === 'kundalini-yoga' ? 'active' : '' }}">7 Days Kundalini Yoga</a></li>
+                               <li><a href="{{ route('hatha-yoga') }}" class="{{ Route::currentRouteName() === 'hatha-yoga' ? 'active' : '' }}">7 Days Hatha Yoga</a></li>
+                           </ul>
+                       </li>
+
                        <li><a href="{{ route('faqs') }}" class="{{ Route::currentRouteName() === 'faqs' ? 'active' : '' }}">Faqs</a></li>
                        <li><a href="{{ route('contact-us') }}" class="{{ Route::currentRouteName() === 'contact-us' ? 'active' : '' }}">Contact Us</a></li>
 

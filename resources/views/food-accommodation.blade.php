@@ -2,7 +2,6 @@
 
 @section('content')
 
-<!-- Page Header -->
 <section class="hero-carousel">
     <div class="carousel-container">
         <div class="carousel-slide active">
@@ -17,509 +16,356 @@
     </div>
 </section>
 
-<!-- Accommodation Options Section -->
-<section class="our-stays">
-    <div class="section-mandala about-mandala-top-left"></div>
+<!-- School & Premises Section -->
+<section id="school" class="about-us">
+    <div class="section-mandala about-mandala-top-right"></div>
     <div class="container">
         <div class="section-header">
-            <span class="section-badge">Accommodation Options</span>
-            <h2>Comfortable Stays for Every Preference</h2>
-            <div class="title-decoration">
-                <div class="decoration-line"></div>
-                <div class="decoration-om">🕉️</div>
-                <div class="decoration-line"></div>
-            </div>
+            <h2>School & Premises</h2>
             <div class="divider"></div>
-            <p>Choose from our range of accommodation options, each designed to provide comfort, peace, and connection with nature.</p>
+            <p>Welcome to Adishesh Yoga School — a serene sanctuary designed to support your journey of self-discovery, healing, and inner peace.</p>
         </div>
-        <div class="stays-container">
-            <div class="stay-card">
-                <div class="stay-image">
-                    <img src="/placeholder.svg?height=300&width=400" alt="Private Room">
-                    <div class="stay-overlay">
-                        <a href="#" class="view-gallery">
-                            <i class="fas fa-images"></i>
-                            <span>View Gallery</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="stay-content">
-                    <div class="stay-location">
-                        <i class="fas fa-bed"></i>
-                        <span>Private Room</span>
-                    </div>
-                    <h3>Single Occupancy Private Room</h3>
-                    <p>Enjoy complete privacy and tranquility in your own space with attached bathroom, mountain views, and traditional Indian décor for a peaceful retreat experience.</p>
-                    <div class="stay-amenities">
-                        <span><i class="fas fa-bath"></i> Private Bathroom</span>
-                        <span><i class="fas fa-mountain"></i> Mountain View</span>
-                        <span><i class="fas fa-wifi"></i> Wi-Fi Access</span>
-                    </div>
-                </div>
-            </div>
-            <div class="stay-card">
-                <div class="stay-image">
-                    <img src="/placeholder.svg?height=300&width=400" alt="Shared Twin Room">
-                    <div class="stay-overlay">
-                        <a href="#" class="view-gallery">
-                            <i class="fas fa-images"></i>
-                            <span>View Gallery</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="stay-content">
-                    <div class="stay-location">
-                        <i class="fas fa-users"></i>
-                        <span>Shared Twin Room</span>
-                    </div>
-                    <h3>Twin Sharing Room</h3>
-                    <p>Perfect for friends or couples, these comfortable twin rooms feature two beds, attached bathroom, and beautiful garden views for a shared retreat experience.</p>
-                    <div class="stay-amenities">
-                        <span><i class="fas fa-bed"></i> Twin Beds</span>
-                        <span><i class="fas fa-leaf"></i> Garden View</span>
-                        <span><i class="fas fa-bath"></i> Attached Bathroom</span>
-                    </div>
-                </div>
-            </div>
-            <div class="stay-card">
-                <div class="stay-image">
-                    <img src="/placeholder.svg?height=300&width=400" alt="Dormitory Style">
-                    <div class="stay-overlay">
-                        <a href="#" class="view-gallery">
-                            <i class="fas fa-images"></i>
-                            <span>View Gallery</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="stay-content">
-                    <div class="stay-location">
-                        <i class="fas fa-home"></i>
-                        <span>Dormitory Style</span>
-                    </div>
-                    <h3>Shared Dormitory</h3>
-                    <p>Experience community living in our clean, comfortable dormitory-style rooms with shared bathrooms, perfect for budget-conscious travelers seeking connection.</p>
-                    <div class="stay-amenities">
-                        <span><i class="fas fa-users"></i> Community Living</span>
-                        <span><i class="fas fa-shower"></i> Shared Bathrooms</span>
-                        <span><i class="fas fa-dollar-sign"></i> Budget Friendly</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
-<!-- Room Features Section -->
-<section class="why-choose-us">
-    <div class="section-mandala about-mandala-top-left"></div>
-    <div class="section-mandala why-choose-mandala-bottom-right"></div>
-    <div class="container">
-        <div class="section-header">
-            <span class="section-badge">Room Features</span>
-            <h2>Comfort & Convenience in Every Room</h2>
-            <div class="title-decoration">
-                <div class="decoration-line"></div>
-                <div class="decoration-swastik">卐</div>
-                <div class="decoration-line"></div>
+        <div class="about-content">
+            <div class="about-image">
+                <img src="/placeholder.svg?height=400&width=500" alt="Adishesh Yoga School">
             </div>
-            <div class="divider"></div>
-            <p>All our accommodations are designed with your comfort and spiritual practice in mind.</p>
+            <div class="about-text">
+                <p>Set amidst nature's calm and beauty, our campus blends the simplicity of traditional Indian ashram life with the comfort of modern amenities. Whether you're here for a short retreat or an intensive teacher training program, our space is crafted to inspire deep practice, reflection, and community.</p>
+            </div>
         </div>
-        <div class="features-container">
+
+        <!-- Our Yoga Spaces -->
+        <div style="margin-top: 4rem;">
+            <h3>Our Yoga Spaces</h3>
+            <p>Our open and airy yoga halls are built to encourage connection with the self and the natural world. With panoramic views, fresh air, and serene surroundings, each session becomes a deeply immersive experience. The halls are equipped with high-quality yoga props and mats to support all styles and levels of practice.</p>
+        </div>
+
+        <!-- Features Grid -->
+        <div class="features-container" style="margin-top: 3rem;">
             <div class="feature-card">
                 <div class="feature-icon">
                     <i class="fas fa-bed"></i>
                 </div>
-                <h3>Comfortable Bedding</h3>
-                <p>Rest peacefully on quality mattresses with clean linens, pillows, and blankets. Extra bedding is provided for cooler mountain evenings.</p>
+                <h3>Comfortable Accommodations</h3>
+                <p>We offer clean, cozy, and peaceful rooms designed for rest and rejuvenation. Whether you choose a private or shared room, each space is simple yet nurturing — a perfect environment to unwind and recharge.</p>
             </div>
+
             <div class="feature-card">
                 <div class="feature-icon">
-                    <i class="fas fa-tint"></i>
+                    <i class="fas fa-utensils"></i>
                 </div>
-                <h3>Hot Water Supply</h3>
-                <p>Enjoy hot water throughout the day in all bathrooms. Solar heating systems ensure eco-friendly and reliable hot water supply.</p>
+                <h3>Sattvic Kitchen & Dining</h3>
+                <p>Our meals are freshly prepared using local, organic ingredients, aligned with the yogic principle of sattva — purity and balance. We serve three nutritious vegetarian meals a day, thoughtfully created to support your practice and well-being.</p>
             </div>
+
             <div class="feature-card">
                 <div class="feature-icon">
-                    <i class="fas fa-lock"></i>
+                    <i class="fas fa-tree"></i>
                 </div>
-                <h3>Secure Storage</h3>
-                <p>Keep your valuables safe with in-room lockers and secure storage areas. All rooms have lockable doors for your privacy and security.</p>
+                <h3>Sacred Surroundings</h3>
+                <p>The premises are surrounded by nature, encouraging quiet reflection, walks in peace, and a deep connection to the earth. Our garden spaces, meditation areas, and small shrines invite silence, prayer, and contemplation.</p>
             </div>
+
             <div class="feature-card">
                 <div class="feature-icon">
-                    <i class="fas fa-leaf"></i>
+                    <i class="fas fa-om"></i>
                 </div>
-                <h3>Natural Ventilation</h3>
-                <p>Rooms are designed with traditional architecture for natural cooling and ventilation, creating a comfortable environment year-round.</p>
+                <h3>Rooted in Tradition, Open to All</h3>
+                <p>Every element of our campus — from the architecture to the daily schedule — honors the ancient roots of yoga while welcoming students of all backgrounds and experience levels.</p>
             </div>
+        </div>
+
+        <div class="section-header" style="margin-top: 4rem;">
+            <p><em>At Adishesh Yoga School, your environment becomes your teacher. Every breath, every step, every moment on our sacred land supports your unfolding into a more peaceful, aware, and joyful you.</em></p>
         </div>
     </div>
 </section>
 
-<!-- Food & Dining Section -->
-<section class="retreat-programs">
+<!-- Stay at Adishesh Yoga Retreat -->
+<section id="stay" class="our-stays">
     <div class="container">
         <div class="section-header">
-            <span class="section-badge">Nourishing Cuisine</span>
-            <h2>Ayurvedic Vegetarian Meals</h2>
-            <div class="title-decoration">
-                <div class="decoration-line"></div>
-                <div class="decoration-lotus">🪷</div>
-                <div class="decoration-line"></div>
-            </div>
+            <h2>Stay at Adishesh Yoga Retreat</h2>
             <div class="divider"></div>
-            <p>Experience the healing power of food with our carefully prepared vegetarian meals based on Ayurvedic principles.</p>
+            <p>Your stay at Adishesh Yoga Retreat is more than accommodation — it's an integral part of your healing and transformation journey. We provide a serene, safe, and comfortable environment that supports deep rest, personal growth, and inner reflection.</p>
+        </div>
+
+        <div class="stays-container">
+            <div class="stay-card">
+                <div class="stay-image">
+                    <img src="/placeholder.svg?height=220&width=350" alt="Peaceful Rooms">
+                </div>
+                <div class="stay-content">
+                    <h3>Peaceful & Comfortable Rooms</h3>
+                    <p>Our rooms are designed with simplicity, cleanliness, and comfort in mind. Whether you choose a private or shared room, each space is furnished with cozy bedding, natural light, and all basic amenities to ensure a restful experience.</p>
+                </div>
+            </div>
+
+            <div class="stay-card">
+                <div class="stay-image">
+                    <img src="/placeholder.svg?height=220&width=350" alt="Nature Surroundings">
+                </div>
+                <div class="stay-content">
+                    <h3>Immersed in Nature</h3>
+                    <p>Wake up to birdsong, breathe in Fresh Mountain or forest air, and unwind under starlit skies. Our retreat is surrounded by nature, creating an atmosphere of calm that invites mindfulness and connection with the earth.</p>
+                </div>
+            </div>
+
+            <div class="stay-card">
+                <div class="stay-image">
+                    <img src="/placeholder.svg?height=220&width=350" alt="Yogic Meals">
+                </div>
+                <div class="stay-content">
+                    <h3>Nourishing Yogic Meals</h3>
+                    <p>Enjoy three sattvic (pure, vegetarian) meals a day, prepared with love and intention. Our meals are fresh, locally sourced, and tailored to support your yoga practice, digestion, and overall vitality.</p>
+                </div>
+            </div>
+
+            <div class="stay-card">
+                <div class="stay-image">
+                    <img src="/placeholder.svg?height=220&width=350" alt="Silence and Stillness">
+                </div>
+                <div class="stay-content">
+                    <h3>Space for Silence & Stillness</h3>
+                    <p>We honor silence as a tool for deepening awareness. Designated areas and periods of quiet give you the chance to turn inward, meditate, and fully absorb the teachings.</p>
+                </div>
+            </div>
+
+            <div class="stay-card">
+                <div class="stay-image">
+                    <img src="/placeholder.svg?height=220&width=350" alt="Modern Comfort">
+                </div>
+                <div class="stay-content">
+                    <h3>Modern Comfort Meets Traditional Vibes</h3>
+                    <p>While our space honors the simplicity of ashram life, we also provide essential comforts such as clean bathrooms, filtered drinking water, fans/heaters (depending on the season), and Wi-Fi in common areas for light connectivity.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-header" style="margin-top: 4rem;">
+            <p><em>At Adishesh Yoga Retreat, your stay becomes a sacred pause — a time to reconnect with yourself, restore your energy, and rediscover peace in every breath.</em></p>
+        </div>
+    </div>
+</section>
+
+<!-- Stay during the Himalayan Retreat -->
+<section id="himalayan" class="retreat-programs">
+    <div class="container">
+        <div class="section-header">
+            <h2>Stay during the Himalayan Retreat</h2>
+            <div class="divider"></div>
+            <p>A retreat in the Himalayas is not just a journey into the mountains — it's a journey into the stillness of your own being. At Adishesh Yoga Retreat, our Himalayan retreat stay offers the perfect blend of natural beauty, yogic simplicity, and heartfelt comfort.</p>
         </div>
 
         <div class="programs-container">
             <div class="program-card">
-                <div class="section-mandala programs-mandala-right"></div>
+                <div class="programs-mandala-left"></div>
                 <div class="program-image">
-                    <img src="/placeholder.svg?height=280&width=400" alt="Breakfast">
+                    <img src="/placeholder.svg?height=220&width=350" alt="Sacred Surroundings">
                     <div class="program-image-overlay"></div>
                 </div>
                 <div class="program-content">
-                    <div class="program-header">
-                        <h3>Energizing Breakfast</h3>
-                        <div class="program-price">
-                            <span class="price-amount">7:30</span>
-                            <span class="price-period">AM</span>
-                        </div>
-                    </div>
-                    <div class="program-duration">
-                        <i class="fas fa-sun"></i>
-                        <span>Start Your Day Right</span>
-                    </div>
-                    <p>Begin each day with a nourishing breakfast featuring fresh fruits, whole grains, herbal teas, and traditional Indian breakfast items.</p>
-                    <ul class="program-features">
-                        <li><i class="fas fa-apple-alt"></i> Fresh seasonal fruits</li>
-                        <li><i class="fas fa-bread-slice"></i> Whole grain options</li>
-                        <li><i class="fas fa-leaf"></i> Herbal teas & fresh juices</li>
-                        <li><i class="fas fa-seedling"></i> Organic ingredients</li>
-                    </ul>
+                    <h3>Sacred Surroundings</h3>
+                    <p>Tucked away in the tranquil foothills or higher Himalayan landscapes, our retreat space offers breathtaking views, crisp mountain air, and an atmosphere of deep serenity. Each day begins with the rising sun over snow-capped peaks and ends with stars shining over silent valleys — a truly sacred setting for self-discovery.</p>
                 </div>
             </div>
 
             <div class="program-card">
-                <div class="section-mandala programs-mandala-left"></div>
+                <div class="programs-mandala-right"></div>
                 <div class="program-image">
-                    <img src="/placeholder.svg?height=280&width=400" alt="Lunch">
+                    <img src="/placeholder.svg?height=220&width=350" alt="Simple Accommodations">
                     <div class="program-image-overlay"></div>
                 </div>
                 <div class="program-content">
-                    <div class="program-header">
-                        <h3>Wholesome Lunch</h3>
-                        <div class="program-price">
-                            <span class="price-amount">12:30</span>
-                            <span class="price-period">PM</span>
-                        </div>
-                    </div>
-                    <div class="program-duration">
-                        <i class="fas fa-sun"></i>
-                        <span>Midday Nourishment</span>
-                    </div>
-                    <p>Enjoy a complete Ayurvedic meal with dal, vegetables, rice, chapati, and accompaniments that balance all six tastes.</p>
-                    <ul class="program-features">
-                        <li><i class="fas fa-seedling"></i> Fresh vegetables & legumes</li>
-                        <li><i class="fas fa-wheat"></i> Freshly made bread</li>
-                        <li><i class="fas fa-pepper-hot"></i> Balanced spices</li>
-                        <li><i class="fas fa-carrot"></i> Seasonal preparations</li>
-                    </ul>
+                    <h3>Simple, Serene Accommodations</h3>
+                    <p>Accommodations are clean, modest, and infused with quiet charm. Rooms are thoughtfully arranged to ensure privacy, rest, and peace. Whether shared or private, each room is equipped with warm bedding, essential furnishings, and access to hot water and clean washrooms.</p>
                 </div>
             </div>
 
             <div class="program-card">
-                <div class="section-mandala programs-mandala-right"></div>
+                <div class="programs-mandala-left"></div>
                 <div class="program-image">
-                    <img src="/placeholder.svg?height=280&width=400" alt="Dinner">
+                    <img src="/placeholder.svg?height=220&width=350" alt="Sattvic Meals">
                     <div class="program-image-overlay"></div>
                 </div>
                 <div class="program-content">
-                    <div class="program-header">
-                        <h3>Light Dinner</h3>
-                        <div class="program-price">
-                            <span class="price-amount">7:00</span>
-                            <span class="price-period">PM</span>
-                        </div>
-                    </div>
-                    <div class="program-duration">
-                        <i class="fas fa-moon"></i>
-                        <span>Evening Comfort</span>
-                    </div>
-                    <p>End your day with a lighter, easily digestible meal designed to promote restful sleep and support your yoga practice.</p>
-                    <ul class="program-features">
-                        <li><i class="fas fa-bowl-rice"></i> Light, digestible foods</li>
-                        <li><i class="fas fa-leaf"></i> Calming herbal teas</li>
-                        <li><i class="fas fa-soup"></i> Warming soups</li>
-                        <li><i class="fas fa-moon"></i> Sleep-promoting ingredients</li>
-                    </ul>
+                    <h3>Wholesome Sattvic Meals</h3>
+                    <p>During the retreat, enjoy three freshly prepared sattvic meals daily — light, nourishing, and made from local ingredients. These meals support your practice, digestion, and overall vitality, helping you stay energized and balanced throughout your stay.</p>
                 </div>
             </div>
+
+            <div class="program-card">
+                <div class="programs-mandala-right"></div>
+                <div class="program-image">
+                    <img src="/placeholder.svg?height=220&width=350" alt="Warmth in Simplicity">
+                    <div class="program-image-overlay"></div>
+                </div>
+                <div class="program-content">
+                    <h3>Warmth in Simplicity</h3>
+                    <p>The Himalayan climate can be crisp, especially in the early mornings and evenings. We provide extra blankets, hot water bottles, and fireside seating when needed — ensuring warmth and comfort in harmony with nature.</p>
+                </div>
+            </div>
+
+            <div class="program-card">
+                <div class="programs-mandala-left"></div>
+                <div class="program-image">
+                    <img src="/placeholder.svg?height=220&width=350" alt="Immersive Practice">
+                    <div class="program-image-overlay"></div>
+                </div>
+                <div class="program-content">
+                    <h3>Immersive Practice Environment</h3>
+                    <p>Yoga and meditation sessions are held in open-air halls or nature-side spaces, where the sounds of flowing rivers and gentle winds deepen your inner silence. This retreat is designed to help you detach from digital noise and reconnect with your soul.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="section-header" style="margin-top: 4rem;">
+            <p><em>Staying in the Himalayas with Adishesh Yoga Retreat is not just about physical comfort — it's about creating space for the soul to breathe.</em></p>
+            <p><em>Come with an open heart, and return home with a transformed spirit.</em></p>
         </div>
     </div>
 </section>
 
-<!-- Dietary Accommodations Section -->
-<section class="about-us">
-    <div class="section-mandala about-mandala-top-right"></div>
+<!-- Yogic Diet Section -->
+<section id="diet" class="about-us">
     <div class="section-mandala about-mandala-bottom-left"></div>
     <div class="container">
         <div class="section-header">
-            <span class="section-badge">Special Diets</span>
-            <h2>We Accommodate All Dietary Needs</h2>
-            <div class="title-decoration">
-                <div class="decoration-line"></div>
-                <div class="decoration-om">🕉️</div>
-                <div class="decoration-line"></div>
-            </div>
+            <h2>Yogic Diet at Adishesh Yoga Retreat</h2>
             <div class="divider"></div>
-            <p>Our kitchen team is experienced in preparing meals for various dietary requirements and restrictions.</p>
+            <h3>Nourishment for Body, Mind & Spirit</h3>
+            <p>At Adishesh Yoga Retreat, food is not just fuel — it is an integral part of your yogic journey. Rooted in the ancient principles of Ayurveda and yogic philosophy, our diet is designed to purify the body, calm the mind, and enhance your spiritual practice.</p>
         </div>
+
         <div class="about-content">
-            <div class="about-image">
-                <img src="/placeholder.svg?height=400&width=500" alt="Kitchen Preparation">
-                <div class="about-badge">
-                    <i class="fas fa-utensils"></i>
-                    <span>Fresh Daily</span>
-                </div>
-            </div>
             <div class="about-text">
+                <h3>Sattvic Meals</h3>
+                <p>We follow a sattvic diet, which includes pure, light, and natural foods that promote clarity, peace, and vitality. Our meals are:</p>
+
                 <div class="about-features">
                     <div class="feature-item">
                         <i class="fas fa-leaf"></i>
-                        <span>Vegan options available for all meals</span>
+                        <span>100% vegetarian (no eggs, meat, or fish)</span>
                     </div>
                     <div class="feature-item">
-                        <i class="fas fa-wheat"></i>
-                        <span>Gluten-free alternatives provided</span>
+                        <i class="fas fa-ban"></i>
+                        <span>Free from onions, garlic, and heavily processed foods</span>
                     </div>
                     <div class="feature-item">
-                        <i class="fas fa-exclamation-triangle"></i>
-                        <span>Allergy-conscious meal preparation</span>
+                        <i class="fas fa-seedling"></i>
+                        <span>Cooked with fresh, local, and seasonal ingredients</span>
                     </div>
                     <div class="feature-item">
                         <i class="fas fa-heart"></i>
-                        <span>Low-sodium and diabetic-friendly options</span>
+                        <span>Lightly spiced and easy to digest</span>
                     </div>
-                </div>
-                <p>We understand that dietary needs vary greatly among our guests. Our experienced kitchen team works closely with participants to ensure everyone enjoys delicious, nourishing meals that support their health and spiritual practice. Please inform us of any dietary restrictions when booking your retreat.</p>
-                <a href="#" class="btn btn-primary">
-                    <i class="fas fa-envelope"></i>
-                    <span>Discuss Your Dietary Needs</span>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Dining Experience Section -->
-<section class="image-gallery">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-badge">Dining Experience</span>
-            <h2>Mindful Eating in Beautiful Settings</h2>
-            <div class="title-decoration">
-                <div class="decoration-line"></div>
-                <div class="decoration-lotus">🪷</div>
-                <div class="decoration-line"></div>
-            </div>
-            <div class="divider"></div>
-            <p>Experience the joy of mindful eating in our beautiful dining spaces surrounded by nature.</p>
-        </div>
-        <div class="gallery-slider">
-            <div class="gallery-track">
-                <div class="gallery-slide">
-                    <img src="/placeholder.svg?height=250&width=350" alt="Outdoor Dining">
-                    <div class="gallery-overlay">
-                        <h4>Outdoor Dining</h4>
-                        <p>Enjoy meals in our beautiful garden setting</p>
-                    </div>
-                </div>
-                <div class="gallery-slide">
-                    <img src="/placeholder.svg?height=250&width=350" alt="Community Dining Hall">
-                    <div class="gallery-overlay">
-                        <h4>Community Dining Hall</h4>
-                        <p>Share meals and conversations with fellow practitioners</p>
-                    </div>
-                </div>
-                <div class="gallery-slide">
-                    <img src="/placeholder.svg?height=250&width=350" alt="Kitchen Garden">
-                    <div class="gallery-overlay">
-                        <h4>Organic Kitchen Garden</h4>
-                        <p>Fresh herbs and vegetables grown on-site</p>
-                    </div>
-                </div>
-                <div class="gallery-slide">
-                    <img src="/placeholder.svg?height=250&width=350" alt="Tea Time">
-                    <div class="gallery-overlay">
-                        <h4>Afternoon Tea</h4>
-                        <p>Relax with herbal teas and healthy snacks</p>
-                    </div>
-                </div>
-                <div class="gallery-slide">
-                    <img src="/placeholder.svg?height=250&width=350" alt="Cooking Classes">
-                    <div class="gallery-overlay">
-                        <h4>Cooking Workshops</h4>
-                        <p>Learn to prepare Ayurvedic meals</p>
-                    </div>
-                </div>
-                <!-- Duplicate slides for infinite loop effect -->
-                <div class="gallery-slide">
-                    <img src="/placeholder.svg?height=250&width=350" alt="Outdoor Dining">
-                    <div class="gallery-overlay">
-                        <h4>Outdoor Dining</h4>
-                        <p>Enjoy meals in our beautiful garden setting</p>
-                    </div>
-                </div>
-                <div class="gallery-slide">
-                    <img src="/placeholder.svg?height=250&width=350" alt="Community Dining Hall">
-                    <div class="gallery-overlay">
-                        <h4>Community Dining Hall</h4>
-                        <p>Share meals and conversations with fellow practitioners</p>
+                    <div class="feature-item">
+                        <i class="fas fa-hands"></i>
+                        <span>Always prepared with mindfulness and love</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-
-<!-- Facilities & Amenities Section -->
-<section class="why-choose-us">
-    <div class="section-mandala about-mandala-top-left"></div>
-    <div class="section-mandala why-choose-mandala-bottom-right"></div>
-    <div class="container">
-        <div class="section-header">
-            <span class="section-badge">Facilities & Amenities</span>
-            <h2>Everything You Need for a Comfortable Stay</h2>
-            <div class="title-decoration">
-                <div class="decoration-line"></div>
-                <div class="decoration-swastik">卐</div>
-                <div class="decoration-line"></div>
-            </div>
-            <div class="divider"></div>
-            <p>Our retreat center offers modern amenities while maintaining a connection to nature and traditional values.</p>
-        </div>
-        <div class="features-container">
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-wifi"></i>
-                </div>
-                <h3>Limited Wi-Fi Access</h3>
-                <p>Stay connected when needed with Wi-Fi in common areas, while encouraging digital detox for a more immersive retreat experience.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-tshirt"></i>
-                </div>
-                <h3>Laundry Services</h3>
-                <p>Convenient laundry facilities and services available to keep your clothes fresh throughout your stay at reasonable rates.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-book"></i>
-                </div>
-                <h3>Library & Reading Area</h3>
-                <p>Quiet spaces for reading and reflection with a collection of spiritual and wellness books, journals, and meditation guides.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon">
-                    <i class="fas fa-shopping-bag"></i>
-                </div>
-                <h3>Boutique Shop</h3>
-                <p>Purchase yoga accessories, spiritual books, natural products, and souvenirs to take home memories of your retreat experience.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Booking Information Section -->
-<section class="about-us">
-    <div class="section-mandala about-mandala-top-right"></div>
-    <div class="section-mandala about-mandala-bottom-left"></div>
-    <div class="container">
-        <div class="section-header">
-            <span class="section-badge">Booking Information</span>
-            <h2>Plan Your Perfect Retreat Stay</h2>
-            <div class="title-decoration">
-                <div class="decoration-line"></div>
-                <div class="decoration-om">🕉️</div>
-                <div class="decoration-line"></div>
-            </div>
-            <div class="divider"></div>
-            <p>Important information to help you choose the right accommodation and prepare for your stay.</p>
-        </div>
-        <div class="about-content">
             <div class="about-image">
-                <img src="/placeholder.svg?height=400&width=500" alt="Retreat Center">
-                <div class="about-badge">
-                    <i class="fas fa-home"></i>
-                    <span>Your Home Away From Home</span>
+                <img src="/placeholder.svg?height=400&width=500" alt="Sattvic Meals">
+            </div>
+        </div>
+
+        <!-- Meal Structure -->
+        <div style="margin-top: 4rem;">
+            <h3>Meal Structure</h3>
+            <p>You'll be served three wholesome meals a day, balanced to support your energy throughout the retreat:</p>
+
+            <div class="features-container" style="margin-top: 2rem;">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-sun"></i>
+                    </div>
+                    <h3>Morning</h3>
+                    <p>Light and energizing (such as herbal teas, fruits, porridge, or spiced herbal water)</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-bowl-food"></i>
+                    </div>
+                    <h3>Afternoon</h3>
+                    <p>Nourishing main meal (with rice, lentils, vegetables, and chapati)</p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-moon"></i>
+                    </div>
+                    <h3>Evening</h3>
+                    <p>Light and grounding (soups, khichdi, or steamed vegetables)</p>
                 </div>
             </div>
-            <div class="about-text">
-                <div class="about-features">
-                    <div class="feature-item">
-                        <i class="fas fa-calendar-check"></i>
-                        <span>Book accommodation preferences in advance</span>
+        </div>
+
+        <!-- Additional Diet Information -->
+        <div style="margin-top: 4rem;">
+            <div class="features-container">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-plus-circle"></i>
                     </div>
-                    <div class="feature-item">
-                        <i class="fas fa-utensils"></i>
-                        <span>Inform us of dietary requirements when booking</span>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fas fa-clock"></i>
-                        <span>Check-in from 2:00 PM, Check-out by 11:00 AM</span>
-                    </div>
-                    <div class="feature-item">
-                        <i class="fas fa-suitcase"></i>
-                        <span>Detailed packing list provided after booking</span>
-                    </div>
+                    <h3>Healing Through Food</h3>
+                    <p>Our kitchen honors food as a form of medicine. We incorporate Ayurvedic principles, offering ingredients and spices that aid digestion, support detoxification, and balance the doshas (body constitutions).</p>
                 </div>
-                <p>We recommend booking your preferred accommodation type early, especially for private rooms during peak seasons. Our team will send you detailed information about what to bring, meal times, and facility guidelines once your booking is confirmed. We're here to ensure your comfort throughout your transformative retreat experience.</p>
-                <a href="#" class="btn btn-primary">
-                    <i class="fas fa-calendar-check"></i>
-                    <span>Book Your Retreat Now</span>
-                </a>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-meditation"></i>
+                    </div>
+                    <h3>Mindful Eating Practice</h3>
+                    <p>At Adishesh, meals are often taken in silence or with quiet reflection, helping you connect more deeply with the food, your body, and the present moment. This simple practice enhances digestion, awareness, and gratitude.</p>
+                </div>
             </div>
+        </div>
+
+        <div class="section-header" style="margin-top: 4rem;">
+            <p><em>The yogic diet is not about restriction — it's about liberation. By eating clean, sattvic food during your retreat, you begin to feel lighter, clearer, and more in tune with your natural rhythm.</em></p>
         </div>
     </div>
 </section>
 
-<!-- Call to Action -->
-<section class="cta">
-    <div class="container">
-        <div class="cta-content">
-            <span class="section-badge">Ready to Experience Comfort?</span>
-            <h2>Book Your Nourishing Retreat Today</h2>
-            <p>Experience the perfect combination of comfort, nourishment, and spiritual growth in our beautiful retreat center. Your journey to wellness begins with a single step.</p>
-            <div class="cta-buttons">
-                <a href="retreats.html" class="btn btn-primary">
-                    <i class="fas fa-paper-plane"></i>
-                    <span>View Retreat Programs</span>
-                </a>
-                <a href="faqs.html" class="btn btn-outline-light">
-                    <i class="fas fa-question-circle"></i>
-                    <span>Food & Accommodation FAQs</span>
-                </a>
-            </div>
-            <div class="cta-features">
-                <div class="cta-feature">
-                    <i class="fas fa-leaf"></i>
-                    <span>100% Vegetarian Meals</span>
-                </div>
-                <div class="cta-feature">
-                    <i class="fas fa-bed"></i>
-                    <span>Comfortable Accommodations</span>
-                </div>
-                <div class="cta-feature">
-                    <i class="fas fa-heart"></i>
-                    <span>Dietary Accommodations</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<script>
+    // Smooth scrolling for navigation links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+
+    // Active navigation highlighting
+    window.addEventListener('scroll', () => {
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('.nav-menu a');
+
+        let current = '';
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (scrollY >= (sectionTop - 200)) {
+                current = section.getAttribute('id');
+            }
+        });
+
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
+    });
+</script>
 
 @endsection

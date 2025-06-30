@@ -17,6 +17,9 @@ return new class extends Migration
             $table->string('designation');
             $table->text('description');
             $table->string('experience');
+            $table->string('title_1')->nullable();
+            $table->string('title_2')->nullable();
+            $table->string('title_3')->nullable();
             $table->string('facebook')->nullable();
             $table->string('twitter')->nullable();
             $table->string('instagram')->nullable();

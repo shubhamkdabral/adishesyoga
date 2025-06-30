@@ -13,6 +13,16 @@ return new class extends Migration
     {
         Schema::create('food_nd_accs', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('retreat_id')->constrained('retreats')->cascadeOnDelete()->cascadeOnUpdate();
+            $table->string('title');
+            $table->text('acc_description');
+            $table->string('room_type');
+            $table->string('amenities');
+            $table->string('connectivity');
+            $table->text('food_description');
+            $table->string('org_local');
+            $table->string('meal_schedule');
+            $table->string('dietary_needs');
             $table->timestamps();
         });
     }

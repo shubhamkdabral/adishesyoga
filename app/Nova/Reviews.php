@@ -2,8 +2,12 @@
 
 namespace App\Nova;
 
+use Ebess\AdvancedNovaMediaLibrary\Fields\Media;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Number;
+use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Textarea;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class Reviews extends Resource
@@ -20,7 +24,7 @@ class Reviews extends Resource
      *
      * @var string
      */
-    public static $title = 'id';
+    public static $title = 'name';
 
     /**
      * The columns that should be searched.
@@ -40,7 +44,19 @@ class Reviews extends Resource
     public function fields(NovaRequest $request)
     {
         return [
-            ID::make()->sortable(),
+            Text::make('Name', 'name')
+                ->rules('required', 'max:255'),
+
+            Text::make('Designation', 'designation')
+                ->rules('required', 'max:255'),
+
+            Number::make('Rating')
+                ->rules('required', 'numeric', 'min:0'),
+
+            Textarea::make('Description')
+                ->rules('required'),
+
+            Media::make('Image', 'review'),
         ];
     }
 
