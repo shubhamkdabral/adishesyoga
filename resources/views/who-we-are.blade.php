@@ -23,8 +23,7 @@
 <section class="about-us">
     <div class="container">
         <div class="section-header">
-            <span class="section-badge">{{ $about->banner_title ?? 'Our Journey' }}</span>
-            <h2>{{ $about->title ?? 'The Story of Adishesh Yoga' }}</h2>
+            <span class="section-badge">{{ $about->title ?? 'The Story of Adishesh Yoga' }}</span>
             <div class="title-decoration">
                 <div class="decoration-line"></div>
                 <div class="decoration-om">🕉️</div>
@@ -46,12 +45,37 @@
     </div>
 </section>
 
+
+<section class="about-us">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge">About Rishikesh</span>
+            <div class="title-decoration">
+                <div class="decoration-line"></div>
+                <div class="decoration-om">🕉️</div>
+                <div class="decoration-line"></div>
+            </div>
+            <div class="divider"></div>
+        </div>
+
+        <div class="about-content">
+            <div class="about-text">
+                {!! $about->rishikesh_description !!}
+            </div>
+            <div class="about-image">
+                <img
+                    src="{{ $about->getUploadedRishikeshMedia()?->getUrl() ?? '/placeholder.svg?height=500&width=600' }}"
+                    alt="{{ $about->title ?? 'Adishesh Yoga Center' }}">
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Our Philosophy -->
 <section style="padding: 4rem 0; background-color: var(--background-light);">
     <div class="container">
         <div class="section-header">
             <span class="section-badge">Our Beliefs</span>
-            <h2>Our Philosophy</h2>
             <div class="title-decoration">
                 <div class="decoration-line"></div>
                 <div class="decoration-lotus">🪷</div>
@@ -100,8 +124,7 @@ $mv = $missionVision->first(); // assuming only one row exists
 <section class="about-us">
     <div class="container">
         <div class="section-header">
-            <span class="section-badge">Our Purpose</span>
-            <h2>Mission & Vision</h2>
+            <span class="section-badge">Mission & Vision</span>
             <div class="title-decoration">
                 <div class="decoration-line"></div>
                 <div class="decoration-om">🕉️</div>
@@ -153,8 +176,7 @@ $mv = $missionVision->first(); // assuming only one row exists
 <section style="padding: 4rem 0; background-color: var(--background-light);">
     <div class="container">
         <div class="section-header">
-            <span class="section-badge">What We Stand For</span>
-            <h2>Our Core Values</h2>
+            <span class="section-badge">Why we are special</span>
             <div class="title-decoration">
                 <div class="decoration-line"></div>
                 <div class="decoration-lotus">🪷</div>
@@ -179,79 +201,5 @@ $mv = $missionVision->first(); // assuming only one row exists
     </div>
 </section>
 
-<!-- Our Achievements -->
-<section class="about-us">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-badge">Our Impact</span>
-            <h2>Achievements & Recognition</h2>
-            <div class="title-decoration">
-                <div class="decoration-line"></div>
-                <div class="decoration-om">🕉️</div>
-                <div class="decoration-line"></div>
-            </div>
-            <div class="divider"></div>
-        </div>
-
-        {{-- Achievements --}}
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-bottom: 4rem;">
-            @foreach ($achievements as $item)
-            <div
-                style="background: white; padding: 2rem; border-radius: 15px; box-shadow: var(--shadow-light); border: 1px solid var(--border-light); display: flex; flex-direction: column; align-items: center; text-align: center;">
-                <div
-                    style="width: 100px; height: 100px; background: linear-gradient(135deg, var(--primary-color), var(--primary-light)); border-radius: 50%; display: flex; justify-content: center; align-items: center; color: white; font-size: 2.5rem; margin-bottom: 1.5rem;">
-                    <span style="font-weight: bold;">{{ $item->count }}</span>
-                </div>
-                <h4 style="font-size: 1.25rem; margin-bottom: 0.5rem;">{{ $item->title }}</h4>
-                <p style="color: var(--text-light);">
-                    {!! $item->description !!}
-                </p>
-            </div>
-            @endforeach
-        </div>
-
-        {{-- Recognitions --}}
-        <div
-            style="max-width: 1000px; margin: 0 auto; background: white; padding: 2.5rem; border-radius: 15px; box-shadow: var(--shadow-light); border: 1px solid var(--border-light);">
-            <h3 style="font-size: 1.5rem; margin-bottom: 1.5rem; text-align: center;">Recognition & Certifications</h3>
-            <div
-                style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: center;">
-                @foreach ($recognitions as $recognition)
-                <div>
-                    <img src="{{ $recognition->getFirstMediaUrl('recognition') ?: '/placeholder.svg?height=100&width=100' }}"
-                        alt="{{ $recognition->title }}"
-                        style="width: 100px; height: 100px; object-fit: contain; margin: 0 auto 1rem;">
-                    <h4 style="font-size: 1.125rem; margin-bottom: 0.5rem;">{{ $recognition->title }}</h4>
-                    <p style="color: var(--text-light); font-size: 0.875rem;">
-                        {!! $recognition->description !!}
-                    </p>
-                </div>
-                @endforeach
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- Call to Action -->
-<section class="cta">
-    <div class="container">
-        <div class="cta-content">
-            <span class="section-badge">Join Our Community</span>
-            <h2>Begin Your Yoga Journey With Us</h2>
-            <p>Experience the authentic teachings of yoga in a supportive and nurturing environment. Whether you're
-                a beginner or an experienced practitioner, we have programs to support your growth.</p>
-            <div class="cta-buttons">
-                <a href="retreat-program.html" class="btn btn-primary">
-                    <span>Explore Our Programs</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-                <a href="contact-us.html" class="btn btn-outline-light">
-                    <span>Contact Us</span>
-                    <i class="fas fa-envelope"></i>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
 
 @endsection

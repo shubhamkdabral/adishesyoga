@@ -47,8 +47,7 @@
     <div class="section-mandala about-mandala-bottom-left"></div>
     <div class="container">
         <div class="section-header">
-            <span class="section-badge">About Us</span>
-            <h2>{{ $about->title }}</h2>
+            <span class="section-badge">{{ $about->title }}</span>
             <div class="title-decoration">
                 <div class="decoration-line"></div>
                 <div class="decoration-om">🕉️</div>
@@ -60,10 +59,6 @@
         <div class="about-content">
             <div class="about-image">
                 <img src="{{ $about->getFirstMediaUrl('about-us') ?: '/placeholder.svg?height=400&width=500' }}" alt="{{ $about->title ?? 'About Image' }}">
-                <div class="about-badge">
-                    <i class="fas fa-award"></i>
-                    <span>Certified Studio</span>
-                </div>
             </div>
             <div class="about-text">
                 <div class="about-features">
@@ -114,7 +109,6 @@
         <div class="section-header">
             <div class="section-mandala programs-mandala-left"></div>
             <span class="section-badge">Retreat Programs</span>
-            <h2>Transformative Retreat Programs</h2>
             <div class="title-decoration">
                 <div class="decoration-line"></div>
                 <div class="decoration-lotus">🪷</div>
@@ -160,19 +154,13 @@
                         <li><i class="fas fa-utensils"></i> Organic meals included</li>
                     </ul>
 
-                    <a href="" class="btn {{ $program->button_type === 'primary' ? 'btn-primary' : 'btn-outline' }}">
+                    <a href="{{ route($program->slug) }}" class="btn {{ $program->button_type === 'primary' ? 'btn-primary' : 'btn-outline' }}">
                         <i class="fas fa-calendar-check"></i>
-                        <span>{{ $program->button_text ?? 'Book Now' }}</span>
+                        <span>{{ $program->button_text ?? 'Apply Now' }}</span>
                     </a>
                 </div>
             </div>
             @endforeach
-        </div>
-        <div class="view-all">
-            <a href="#" class="btn btn-primary btn-large">
-                <i class="fas fa-th-large"></i>
-                <span>View All Retreat Programs</span>
-            </a>
         </div>
     </div>
 </section>
@@ -184,7 +172,6 @@
     <div class="container">
         <div class="section-header">
             <span class="section-badge">Why Choose Us</span>
-            <h2>Experience the Serenity Difference</h2>
             <div class="title-decoration">
                 <div class="decoration-line"></div>
                 <div class="decoration-swastik">卐</div>
@@ -216,7 +203,6 @@
     <div class="container">
         <div class="section-header">
             <span class="section-badge">Our Stays</span>
-            <h2>Beautiful Places to Stay</h2>
             <div class="title-decoration">
                 <div class="decoration-line"></div>
                 <div class="decoration-om">🕉️</div>
@@ -264,8 +250,7 @@
     <div class="section-mandala teams-mandala-top-right"></div>
     <div class="container">
         <div class="section-header">
-            <span class="section-badge">Our Teams</span>
-            <h2>Meet Our Expert Instructors</h2>
+            <span class="section-badge">Meet Our Expert Instructors</span>
             <div class="title-decoration">
                 <div class="decoration-line"></div>
                 <div class="decoration-om">🕉️</div>
@@ -275,53 +260,39 @@
             <p>Our certified yoga instructors bring years of experience and deep spiritual knowledge to guide your
                 journey.</p>
         </div>
-        <div class="team-slider">
-            <div class="team-track">
-                @foreach($ourteam as $member)
-                <div class="team-card">
-                    <div class="team-image">
-                        <img src="{{ $member->getFirstMediaUrl('team') ?? '/placeholder.svg?height=300&width=250' }}"
-                            alt="{{ $member->name }}">
-                        <div class="team-overlay">
-                            <div class="team-social">
-                                @if($member->instagram)
-                                <a href="{{ $member->instagram }}"><i class="fab fa-instagram"></i></a>
-                                @endif
-                                @if($member->facebook)
-                                <a href="{{ $member->facebook }}"><i class="fab fa-facebook"></i></a>
-                                @endif
-                                @if($member->linkedin)
-                                <a href="{{ $member->linkedin }}"><i class="fab fa-linkedin"></i></a>
-                                @endif
-                            </div>
-                        </div>
-                    </div>
-                    <div class="team-content">
-                        <h3>{{ $member->name }}</h3>
-                        <span class="team-role">{{ $member->designation }}</span>
-                        <div class="team-experience">{{ $member->experience }} Experience</div>
-                        <p>{{ Str::limit(trim(strip_tags(html_entity_decode($member->description))), 160) }}</p>
-                        <div class="team-specialties">
-                            @if($member->title_1)<span>{{ $member->title_1 }}</span>@endif
-                            @if($member->title_2)<span>{{ $member->title_2 }}</span>@endif
-                            @if($member->title_3)<span>{{ $member->title_3 }}</span>@endif
+        <div class="team-track">
+            @foreach($ourteam as $member)
+            <div class="team-card">
+                <div class="team-image">
+                    <img src="{{ $member->getFirstMediaUrl('team') ?? '/placeholder.svg?height=300&width=250' }}"
+                        alt="{{ $member->name }}">
+                    <div class="team-overlay">
+                        <div class="team-social">
+                            @if($member->instagram)
+                            <a href="{{ $member->instagram }}"><i class="fab fa-instagram"></i></a>
+                            @endif
+                            @if($member->facebook)
+                            <a href="{{ $member->facebook }}"><i class="fab fa-facebook"></i></a>
+                            @endif
+                            @if($member->linkedin)
+                            <a href="{{ $member->linkedin }}"><i class="fab fa-linkedin"></i></a>
+                            @endif
                         </div>
                     </div>
                 </div>
-                @endforeach
+                <div class="team-content">
+                    <h3>{{ $member->name }}</h3>
+                    <span class="team-role">{{ $member->designation }}</span>
+                    <div class="team-experience">{{ $member->experience }} Experience</div>
+                    <p>{{ Str::limit(trim(strip_tags(html_entity_decode($member->description))), 160) }}</p>
+                    <div class="team-specialties">
+                        @if($member->title_1)<span>{{ $member->title_1 }}</span>@endif
+                        @if($member->title_2)<span>{{ $member->title_2 }}</span>@endif
+                        @if($member->title_3)<span>{{ $member->title_3 }}</span>@endif
+                    </div>
+                </div>
             </div>
-
-            {{-- Optional pagination dots --}}
-            <div class="team-dots">
-                @for($i = 0; $i < ceil(count($ourteam) / 3); $i++)
-                    <span class="dot {{ $i == 0 ? 'active' : '' }}"></span>
-                    @endfor
-            </div>
-
-            <div class="slider-nav">
-                <button class="slider-prev"><i class="fas fa-chevron-left"></i></button>
-                <button class="slider-next"><i class="fas fa-chevron-right"></i></button>
-            </div>
+            @endforeach
         </div>
     </div>
 </section>
@@ -332,8 +303,7 @@
     <div class="section-mandala testimonials-mandala-bottom-left"></div>
     <div class="container">
         <div class="section-header">
-            <span class="section-badge">Testimonials</span>
-            <h2>What Our Students Say</h2>
+            <span class="section-badge">Our Reviews</span>
             <div class="title-decoration">
                 <div class="decoration-line"></div>
                 <div class="decoration-lotus">🪷</div>

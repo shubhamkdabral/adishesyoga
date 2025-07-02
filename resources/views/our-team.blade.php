@@ -63,7 +63,7 @@
 <section class="our-teams">
     <div class="section-mandala teams-mandala-top-right"></div>
     <div class="container">
-        @foreach ($ourteam as $index => $member)
+        @foreach ($ourteacher as $index => $member)
         <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: center; margin-bottom: 5rem;">
             @if ($index % 2 === 0)
             {{-- Text Left, Image Right --}}
@@ -77,11 +77,15 @@
                     {!! $member->description !!}
                 </p>
                 <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.5rem;">
-                    @foreach (explode(',', $member->specializations) as $skill)
                     <span style="background: white; color: var(--primary-color); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.875rem; font-weight: 500; border: 1px solid var(--border-light);">
-                        {{ trim($skill) }}
+                        {{ $member->title_1 }}
                     </span>
-                    @endforeach
+                    <span style="background: white; color: var(--primary-color); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.875rem; font-weight: 500; border: 1px solid var(--border-light);">
+                        {{ $member->title_2 }}
+                    </span>
+                    <span style="background: white; color: var(--primary-color); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.875rem; font-weight: 500; border: 1px solid var(--border-light);">
+                        {{ $member->title_3 }}
+                    </span>
                 </div>
             </div>
             <div>
@@ -105,7 +109,7 @@
                 </div>
             </div>
             <div>
-                <span style="display: inline-block; background: var(--secondary-color); color: white; padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.875rem; font-weight: 600; margin-bottom: 1rem;">
+                <span style="display: inline-block; background: var(--primary-color); color: white; padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.875rem; font-weight: 600; margin-bottom: 1rem;">
                     {{ $member->designation }}
                 </span>
                 <h3 style="font-size: 2rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif;">{{ $member->name }}</h3>
@@ -114,17 +118,83 @@
                     {!! $member->description !!}
                 </p>
                 <div style="display: flex; flex-wrap: wrap; gap: 0.75rem; margin-bottom: 1.5rem;">
-                    @foreach (explode(',', $member->specializations) as $skill)
                     <span style="background: white; color: var(--primary-color); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.875rem; font-weight: 500; border: 1px solid var(--border-light);">
-                        {{ trim($skill) }}
+                        {{ $member->title_1 }}
                     </span>
-                    @endforeach
+                    <span style="background: white; color: var(--primary-color); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.875rem; font-weight: 500; border: 1px solid var(--border-light);">
+                        {{ $member->title_2 }}
+                    </span>
+                    <span style="background: white; color: var(--primary-color); padding: 0.5rem 1rem; border-radius: 50px; font-size: 0.875rem; font-weight: 500; border: 1px solid var(--border-light);">
+                        {{ $member->title_3 }}
+                    </span>
                 </div>
             </div>
             @endif
         </div>
         @endforeach
     </div>
+</section>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem; max-width: 1200px; margin: 0 auto;">
+    @foreach ($ourteam as $member)
+    <div style="background: white; border-radius: 20px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.1); transition: all 0.3s ease; position: relative;"
+        onmouseover="this.style.transform='translateY(-10px)'; this.style.boxShadow='0 20px 40px rgba(0,0,0,0.15)'"
+        onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 10px 30px rgba(0,0,0,0.1)'">
+
+        <!-- Image Container -->
+        <div style="position: relative; overflow: hidden;">
+            <img src="{{ optional($member->media->first())->getUrl() }}" alt="{{ $member->name }}"
+                style="width: 100%; height: 300px; object-fit: cover; transition: transform 0.3s ease;"
+                onmouseover="this.style.transform='scale(1.05)'"
+                onmouseout="this.style.transform='scale(1)'">
+
+            <!-- Experience Badge -->
+            <div style="position: absolute; top: 1rem; right: 1rem; background: rgba(255,255,255,0.95); backdrop-filter: blur(10px); padding: 0.5rem 1rem; border-radius: 25px; font-weight: 600; color: var(--primary-color); font-size: 0.875rem; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+                {{ $member->experience }}+ Years
+            </div>
+
+            <!-- Designation Badge -->
+            <div style="position: absolute; bottom: 1rem; left: 1rem; background: var(--primary-color); color: white; padding: 0.5rem 1rem; border-radius: 25px; font-size: 0.875rem; font-weight: 600;">
+                {{ $member->designation }}
+            </div>
+        </div>
+
+        <!-- Card Content -->
+        <div style="padding: 1.5rem;">
+            <!-- Name -->
+            <h3 style="font-size: 1.5rem; margin-bottom: 1rem; font-family: 'Playfair Display', serif; color: var(--text-dark); text-align: center;">
+                {{ $member->name }}
+            </h3>
+
+            <!-- Decorative Line -->
+            <div style="width: 60px; height: 3px; background: linear-gradient(90deg, var(--primary-color), var(--primary-light)); margin: 0 auto 1rem; border-radius: 2px;"></div>
+
+            <!-- Description -->
+            <p style="color: var(--text-light); line-height: 1.6; margin-bottom: 1.5rem; font-size: 0.95rem; text-align: center;">
+                {!! Str::limit(strip_tags($member->description), 120) !!}
+            </p>
+
+            <!-- Specializations -->
+            <div style="display: flex; flex-wrap: wrap; gap: 0.5rem; justify-content: center; margin-bottom: 1rem;">
+                @php
+                $specializations = array_slice(explode(',', $member->specializations), 0, 3);
+                @endphp
+                @foreach ($specializations as $skill)
+                <span style="background: linear-gradient(135deg, var(--primary-light), var(--primary-color)); color: white; padding: 0.4rem 0.8rem; border-radius: 15px; font-size: 0.8rem; font-weight: 500;">
+                    {{ trim($skill) }}
+                </span>
+                @endforeach
+                @if(count(explode(',', $member->specializations)) > 3)
+                <span style="background: var(--text-light); color: white; padding: 0.4rem 0.8rem; border-radius: 15px; font-size: 0.8rem; font-weight: 500;">
+                    +{{ count(explode(',', $member->specializations)) - 3 }} more
+                </span>
+                @endif
+            </div>
+        </div>
+    </div>
+    @endforeach
+</div>
+</div>
 </section>
 
 

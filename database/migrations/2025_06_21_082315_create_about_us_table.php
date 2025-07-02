@@ -23,6 +23,7 @@ return new class extends Migration
             $table->string('key_point_3');
             $table->string('key_point_4');
             $table->text('description');
+            $table->text('rishikesh_description');
             $table->timestamps();
         });
     }

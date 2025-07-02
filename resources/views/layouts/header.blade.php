@@ -38,7 +38,7 @@
                            <ul class="dropdown-menu">
                                <li><a href="{{ route('who-we-are') }}" class="{{ Route::currentRouteName() === 'who-we-are' ? 'active' : '' }}">Who We Are</a></li>
                                <li><a href="{{ route('founders') }}" class="{{ Route::currentRouteName() === 'founders' ? 'active' : '' }}">Our Founders</a></li>
-                               <li><a href="{{ route('our-teacher') }}" class="{{ Route::currentRouteName() === 'our-teacher' ? 'active' : '' }}">Our Teachers</a></li>
+                               <li><a href="{{ route('our-teacher') }}" class="{{ Route::currentRouteName() === 'our-teacher' ? 'active' : '' }}">Our Teachers & Team</a></li>
                                <li><a href="{{ route('food-and-accommodation') }}" class="{{ Route::currentRouteName() === 'food-and-accommodation' ? 'active' : '' }}">Food and Accommodation</a></li>
                                <li><a href="{{ route('privacy-policy') }}" class="{{ Route::currentRouteName() === 'privacy-policy' ? 'active' : '' }}">Privacy Policy</a></li>
                            </ul>
@@ -60,12 +60,12 @@
                        <li><a href="{{ route('contact-us') }}" class="{{ Route::currentRouteName() === 'contact-us' ? 'active' : '' }}">Contact Us</a></li>
 
                        <li class="mobile-only"><a href="#" class="nav-book-btn"><i class="fas fa-calendar-check"></i>
-                               Book Now</a></li>
+                               Apply Now</a></li>
                    </ul>
                    <div class="header-right">
                        <a href="#" class="btn btn-primary desktop-only">
                            <i class="fas fa-calendar-check"></i>
-                           <span>Book Now</span>
+                           <span>Apply Now</span>
                        </a>
                        <div class="mobile-menu" id="mobile-menu-toggle">
                            <i class="fas fa-bars"></i>

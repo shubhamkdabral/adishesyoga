@@ -8,8 +8,10 @@ use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
 use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
-class RetreatNearby extends Model implements HasMedia
+class RetreatNearBy extends Model implements HasMedia
 {
+    protected $table = 'retreat_nearbies';
+
     use HasFactory, InteractsWithMedia;
 
     public static function getUploadsCollectionName(): string

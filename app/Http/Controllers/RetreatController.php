@@ -28,18 +28,21 @@ class RetreatController extends Controller
 
     public function himalayanHiking()
     {
+        $otherRetreats = Retreat::with(['media', 'nearBy.media'])->where('slug', '!=', 'himalayan-hiking')->get();
         $retreat = Retreat::with(['media', 'nearBy.media'])->where('slug', 'himalayan-hiking')->firstOrFail();
         $nearBy = $retreat->nearBy;
-        return view('himalayan-hiking', compact('retreat', 'nearBy'));
+        return view('himalayan-hiking', compact('retreat', 'nearBy', 'otherRetreats'));
     }
 
     public function hathaYoga()
     {
-        return view('7-days-hatha-yoga');
+        $otherRetreats = Retreat::with(['media', 'nearBy.media'])->where('slug', '!=', '7-days-hatha-yoga')->get();
+        return view('7-days-hatha-yoga', compact('otherRetreats'));
     }
 
     public function kundaliniYoga()
     {
-        return view('7-days-kundalini-yoga');
+        $otherRetreats = Retreat::with(['media', 'nearBy.media'])->where('slug', '!=', '7-days-kundalini-yoga')->get();
+        return view('7-days-kundalini-yoga', compact('otherRetreats'));
     }
 }

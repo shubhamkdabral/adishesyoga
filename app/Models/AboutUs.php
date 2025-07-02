@@ -36,6 +36,19 @@ class AboutUs extends Model implements HasMedia
      */
     public function getUploadedBannerMedia(): ?Media
     {
-        return $this->getFirstMedia(self::getUploadsCollectionName());
+        return $this->getFirstMedia(self::getUploadsBannerName());
+    }
+
+    public static function getUploadsRishikesh(): string
+    {
+        return 'rishikesh';
+    }
+
+    /**
+     * @return \Spatie\MediaLibrary\MediaCollections\Models\Media|null
+     */
+    public function getUploadedRishikeshMedia(): ?Media
+    {
+        return $this->getFirstMedia(self::getUploadsRishikesh());
     }
 }

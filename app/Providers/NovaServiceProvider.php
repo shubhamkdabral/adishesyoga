@@ -2,7 +2,16 @@
 
 namespace App\Providers;
 
+use App\Nova\AboutUs;
+use App\Nova\ImageSlider;
+use App\Nova\OurTeams;
+use App\Nova\Reviews;
+use App\Nova\Slider;
+use App\Nova\WhyChooseUs;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Gate;
+use Laravel\Nova\Menu\MenuItem;
+use Laravel\Nova\Menu\MenuSection;
 use Laravel\Nova\Nova;
 use Laravel\Nova\NovaApplicationServiceProvider;
 
@@ -16,6 +25,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     public function boot()
     {
         parent::boot();
+        $this->customMenu();
     }
 
     /**
@@ -26,9 +36,9 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     protected function routes()
     {
         Nova::routes()
-                ->withAuthenticationRoutes()
-                ->withPasswordResetRoutes()
-                ->register();
+            ->withAuthenticationRoutes()
+            ->withPasswordResetRoutes()
+            ->register();
     }
 
     /**
@@ -77,5 +87,30 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     public function register()
     {
         //
+    }
+
+    private function customMenu()
+    {
+        return Nova::mainMenu(function (Request $request) {
+            return [
+                MenuSection::make('Home Section', [
+                    MenuItem::resource(Slider::class),
+                    MenuItem::resource(ImageSlider::class),
+                    MenuItem::resource(WhyChooseUs::class),
+                    MenuItem::resource(Reviews::class),
+                ])->icon('shield-check')->collapsable(),
+
+                MenuSection::make('About Us', [
+                    MenuItem::resource(AboutUs::class),
+                    MenuItem::resource(ImageSlider::class),
+                    MenuItem::resource(WhyChooseUs::class),
+                    MenuItem::resource(Reviews::class),
+                ])->icon('shield-check')->collapsable(),
+
+                MenuSection::make('Our Teachers & Team', [
+                    MenuItem::resource(OurTeams::class),
+                ])->icon('shield-check')->collapsable(),
+            ];
+        });
     }
 }

@@ -53,8 +53,7 @@
 <section class="retreat-features-simple" style="padding: 5rem 0; background: var(--background-light);">
     <div class="container">
         <div class="section-header">
-            <span class="section-badge">Spiritual Journey</span>
-            <h2>The Path of Kundalini Awakening</h2>
+            <span class="section-badge">The Path of Kundalini Awakening</span>
             <div class="title-decoration">
                 <div class="decoration-line"></div>
                 <div class="decoration-om">🕉️</div>
@@ -117,8 +116,7 @@
 <section class="about-us">
     <div class="container">
         <div class="section-header">
-            <span class="section-badge">Daily Journey</span>
-            <h2>7-Day Kundalini Retreat Schedule</h2>
+            <span class="section-badge">7-Day Kundalini Retreat Schedule</span>
             <div class="title-decoration">
                 <div class="decoration-line"></div>
                 <div class="decoration-om">🕉️</div>
@@ -277,12 +275,210 @@
     </div>
 </section>
 
+<!-- Upcoming Dates Calendar -->
+<section class="upcoming-dates" style="padding: 5rem 0; background: var(--background-white);">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-badge">Upcoming Retreat Dates</span>
+            <div class="title-decoration">
+                <div class="decoration-line"></div>
+                <div class="decoration-lotus">🪷</div>
+                <div class="decoration-line"></div>
+            </div>
+            <div class="divider"></div>
+            <p>Choose your preferred dates and accommodation type for the upcoming retreats</p>
+        </div>
+
+        <!-- Calendar Table -->
+        <div class="dates-calendar" style="background: white; border-radius: 15px; box-shadow: var(--shadow-light); overflow: hidden; border: 1px solid var(--border-light);">
+            <!-- Table Header -->
+            <div class="calendar-header" style="background: linear-gradient(135deg, var(--primary-color), var(--primary-light)); color: white; padding: 1.5rem; display: grid; grid-template-columns: 2fr 1.5fr 1.5fr 1fr; gap: 1rem; font-weight: 600; text-align: center;">
+                <div>Retreat Dates</div>
+                <div>Shared Room</div>
+                <div>Private Room</div>
+                <div>Booking</div>
+            </div>
+
+            <!-- Calendar Rows -->
+            <div class="calendar-row" style="display: grid; grid-template-columns: 2fr 1.5fr 1.5fr 1fr; gap: 1rem; padding: 1.5rem; border-bottom: 1px solid var(--border-light); align-items: center;">
+                <div class="date-info">
+                    <div style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">March 15 - 23, 2024</div>
+                    <div style="font-size: 0.875rem; color: var(--text-light);">9 Days • Spring Season</div>
+                    <div style="font-size: 0.75rem; color: var(--primary-color); margin-top: 0.25rem;">
+                        <i class="fas fa-users"></i> 8 spots available
+                    </div>
+                </div>
+                <div class="room-price" style="text-align: center;">
+                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary-color); margin-bottom: 0.25rem;">$899</div>
+                    <div style="font-size: 0.75rem; color: var(--text-light);">per person</div>
+                </div>
+                <div class="room-price" style="text-align: center;">
+                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary-color); margin-bottom: 0.25rem;">$1,299</div>
+                    <div style="font-size: 0.75rem; color: var(--text-light);">per person</div>
+                </div>
+                <div class="booking-btn" style="text-align: center;">
+                    <button class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.875rem;">
+                        Apply Now
+                    </button>
+                </div>
+            </div>
+
+            <div class="calendar-row" style="display: grid; grid-template-columns: 2fr 1.5fr 1.5fr 1fr; gap: 1rem; padding: 1.5rem; border-bottom: 1px solid var(--border-light); align-items: center;">
+                <div class="date-info">
+                    <div style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">April 12 - 20, 2024</div>
+                    <div style="font-size: 0.875rem; color: var(--text-light);">9 Days • Spring Season</div>
+                    <div style="font-size: 0.75rem; color: var(--primary-color); margin-top: 0.25rem;">
+                        <i class="fas fa-users"></i> 5 spots available
+                    </div>
+                </div>
+                <div class="room-price" style="text-align: center;">
+                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary-color); margin-bottom: 0.25rem;">$899</div>
+                    <div style="font-size: 0.75rem; color: var(--text-light);">per person</div>
+                </div>
+                <div class="room-price" style="text-align: center;">
+                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary-color); margin-bottom: 0.25rem;">$1,299</div>
+                    <div style="font-size: 0.75rem; color: var(--text-light);">per person</div>
+                </div>
+                <div class="booking-btn" style="text-align: center;">
+                    <button class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.875rem;">
+                        Apply Now
+                    </button>
+                </div>
+            </div>
+
+            <div class="calendar-row" style="display: grid; grid-template-columns: 2fr 1.5fr 1.5fr 1fr; gap: 1rem; padding: 1.5rem; border-bottom: 1px solid var(--border-light); align-items: center;">
+                <div class="date-info">
+                    <div style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">May 18 - 26, 2024</div>
+                    <div style="font-size: 0.875rem; color: var(--text-light);">9 Days • Summer Season</div>
+                    <div style="font-size: 0.75rem; color: var(--primary-color); margin-top: 0.25rem;">
+                        <i class="fas fa-users"></i> 12 spots available
+                    </div>
+                </div>
+                <div class="room-price" style="text-align: center;">
+                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary-color); margin-bottom: 0.25rem;">$949</div>
+                    <div style="font-size: 0.75rem; color: var(--text-light);">per person</div>
+                </div>
+                <div class="room-price" style="text-align: center;">
+                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary-color); margin-bottom: 0.25rem;">$1,349</div>
+                    <div style="font-size: 0.75rem; color: var(--text-light);">per person</div>
+                </div>
+                <div class="booking-btn" style="text-align: center;">
+                    <button class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.875rem;">
+                        Apply Now
+                    </button>
+                </div>
+            </div>
+
+            <div class="calendar-row" style="display: grid; grid-template-columns: 2fr 1.5fr 1.5fr 1fr; gap: 1rem; padding: 1.5rem; border-bottom: 1px solid var(--border-light); align-items: center;">
+                <div class="date-info">
+                    <div style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">June 22 - 30, 2024</div>
+                    <div style="font-size: 0.875rem; color: var(--text-light);">9 Days • Summer Season</div>
+                    <div style="font-size: 0.75rem; color: var(--primary-color); margin-top: 0.25rem;">
+                        <i class="fas fa-users"></i> 7 spots available
+                    </div>
+                </div>
+                <div class="room-price" style="text-align: center;">
+                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary-color); margin-bottom: 0.25rem;">$949</div>
+                    <div style="font-size: 0.75rem; color: var(--text-light);">per person</div>
+                </div>
+                <div class="room-price" style="text-align: center;">
+                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary-color); margin-bottom: 0.25rem;">$1,349</div>
+                    <div style="font-size: 0.75rem; color: var(--text-light);">per person</div>
+                </div>
+                <div class="booking-btn" style="text-align: center;">
+                    <button class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.875rem;">
+                        Apply Now
+                    </button>
+                </div>
+            </div>
+
+            <div class="calendar-row" style="display: grid; grid-template-columns: 2fr 1.5fr 1.5fr 1fr; gap: 1rem; padding: 1.5rem; border-bottom: 1px solid var(--border-light); align-items: center;">
+                <div class="date-info">
+                    <div style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">September 15 - 23, 2024</div>
+                    <div style="font-size: 0.875rem; color: var(--text-light);">9 Days • Autumn Season</div>
+                    <div style="font-size: 0.75rem; color: var(--primary-color); margin-top: 0.25rem;">
+                        <i class="fas fa-users"></i> 10 spots available
+                    </div>
+                </div>
+                <div class="room-price" style="text-align: center;">
+                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary-color); margin-bottom: 0.25rem;">$899</div>
+                    <div style="font-size: 0.75rem; color: var(--text-light);">per person</div>
+                </div>
+                <div class="room-price" style="text-align: center;">
+                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary-color); margin-bottom: 0.25rem;">$1,299</div>
+                    <div style="font-size: 0.75rem; color: var(--text-light);">per person</div>
+                </div>
+                <div class="booking-btn" style="text-align: center;">
+                    <button class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.875rem;">
+                        Apply Now
+                    </button>
+                </div>
+            </div>
+
+            <div class="calendar-row" style="display: grid; grid-template-columns: 2fr 1.5fr 1.5fr 1fr; gap: 1rem; padding: 1.5rem; align-items: center;">
+                <div class="date-info">
+                    <div style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">October 20 - 28, 2024</div>
+                    <div style="font-size: 0.875rem; color: var(--text-light);">9 Days • Autumn Season</div>
+                    <div style="font-size: 0.75rem; color: var(--primary-color); margin-top: 0.25rem;">
+                        <i class="fas fa-users"></i> 6 spots available
+                    </div>
+                </div>
+                <div class="room-price" style="text-align: center;">
+                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary-color); margin-bottom: 0.25rem;">$899</div>
+                    <div style="font-size: 0.75rem; color: var(--text-light);">per person</div>
+                </div>
+                <div class="room-price" style="text-align: center;">
+                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary-color); margin-bottom: 0.25rem;">$1,299</div>
+                    <div style="font-size: 0.75rem; color: var(--text-light);">per person</div>
+                </div>
+                <div class="booking-btn" style="text-align: center;">
+                    <button class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.875rem;">
+                        Apply Now
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Info -->
+        <div style="text-align: center; margin-top: 3rem;">
+            <div style="background: var(--background-light); padding: 2rem; border-radius: 15px; margin-bottom: 2rem;">
+                <h3 style="color: var(--primary-color); margin-bottom: 1rem;">What's Included</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; text-align: left;">
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-check" style="color: var(--primary-color);"></i>
+                        <span>All meals & accommodation</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-check" style="color: var(--primary-color);"></i>
+                        <span>Daily yoga & meditation</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-check" style="color: var(--primary-color);"></i>
+                        <span>Himalayan treks & excursions</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-check" style="color: var(--primary-color);"></i>
+                        <span>Ayurvedic treatments</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-check" style="color: var(--primary-color);"></i>
+                        <span>Transportation during retreat</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-check" style="color: var(--primary-color);"></i>
+                        <span>Certificate of completion</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Supportive Practices -->
 <section class="retreat-features-simple" style="padding: 5rem 0; background: var(--background-light);">
     <div class="container">
         <div class="section-header">
-            <span class="section-badge">Holistic Approach</span>
-            <h2>Supportive Practices</h2>
+            <span class="section-badge">Supportive Practices</span>
             <div class="title-decoration">
                 <div class="decoration-line"></div>
                 <div class="decoration-lotus">🪷</div>
@@ -337,8 +533,7 @@
     <div class="container">
         <div class="about-content">
             <div class="about-text">
-                <span class="section-badge">Commitment</span>
-                <h2>Duration & Transformative Potential</h2>
+                <span class="section-badge">Duration & Transformative Potential</span>
                 <div style="width: 60px; height: 3px; background: linear-gradient(90deg, var(--primary-color), var(--primary-light)); margin-bottom: 1.5rem; border-radius: 2px;"></div>
                 <p>Our 7-day introduction provides a solid foundation for understanding and experiencing Kundalini energy. While deeper progress is seen in longer programs, this retreat offers meaningful transformation and practical tools for continued practice.</p>
                 <p>For those seeking more profound experiences and sustained practice upon return, we also offer extended courses of 15 days or more. These longer retreats allow for deeper integration and more significant energetic shifts.</p>
@@ -358,8 +553,7 @@
 <section class="post-retreat-benefits" style="padding: 5rem 0; background: var(--background-white);">
     <div class="container">
         <div class="section-header">
-            <span class="section-badge">Safe Practice</span>
-            <h2>Guidance & Integration for Kundalini Practice</h2>
+            <span class="section-badge">Guidance & Integration for Kundalini Practice</span>
             <div class="title-decoration">
                 <div class="decoration-line"></div>
                 <div class="decoration-lotus">🪷</div>
@@ -408,8 +602,7 @@
 <section class="small-group-advantage" style="padding: 5rem 0; background: var(--background-light);">
     <div class="container">
         <div class="section-header">
-            <span class="section-badge">Practice Summary</span>
-            <h2>Essential Elements for Safe Kundalini Practice</h2>
+            <span class="section-badge">Essential Elements for Safe Kundalini Practice</span>
             <div class="title-decoration">
                 <div class="decoration-line"></div>
                 <div class="decoration-om">🕉️</div>
@@ -454,37 +647,64 @@
     </div>
 </section>
 
-<!-- Call to Action -->
-<section class="cta">
+<!-- Retreat Programs Section -->
+<section class="retreat-programs" id="programs">
     <div class="container">
-        <div class="cta-content">
-            <span class="section-badge">Sacred Journey</span>
-            <h2>Begin Your Kundalini Awakening</h2>
-            <p>Join our 7-day introduction to Kundalini retreat and experience the profound transformation that comes from awakening your spiritual energy. Limited spaces ensure personalized guidance and safe practice.</p>
-            <div class="cta-buttons">
-                <a href="mailto:adisheshyoga@gmail.com" class="btn btn-primary">
-                    <span>Book Your Retreat</span>
-                    <i class="fas fa-arrow-right"></i>
-                </a>
-                <a href="http://www.adisheshyoga.com" class="btn btn-outline-light">
-                    <span>Learn More</span>
-                    <i class="fas fa-external-link-alt"></i>
-                </a>
+        <div class="section-header">
+            <div class="section-mandala programs-mandala-left"></div>
+            <span class="section-badge">Other Retreat Programs</span>
+            <div class="title-decoration">
+                <div class="decoration-line"></div>
+                <div class="decoration-lotus">🪷</div>
+                <div class="decoration-line"></div>
             </div>
-            <div class="cta-features">
-                <div class="cta-feature">
-                    <i class="fas fa-fire"></i>
-                    <span>Energy Awakening</span>
+            <div class="divider"></div>
+            <p>Discover our carefully crafted retreat programs designed to rejuvenate your mind, body, and soul.</p>
+        </div>
+        <div class="programs-container">
+            @foreach($otherRetreats as $index => $program)
+            <div class="program-card {{ $index === 0 ? 'featured' : '' }}">
+                <div class="section-mandala {{ $index % 2 === 0 ? 'programs-mandala-left' : 'programs-mandala-right' }}"></div>
+
+                @if($index === 0)
+                <div class="program-badge">Most Popular</div>
+                @endif
+
+                <div class="program-image">
+                    <img src="{{ $program->getUploadedMedia()?->getUrl() ?? '/placeholder.svg' }}" alt="{{ $program->title }}">
+                    <div class="program-image-overlay"></div>
                 </div>
-                <div class="cta-feature">
-                    <i class="fas fa-shield-alt"></i>
-                    <span>Safe Guidance</span>
-                </div>
-                <div class="cta-feature">
-                    <i class="fas fa-crown"></i>
-                    <span>Spiritual Growth</span>
+
+                <div class="program-content">
+                    <div class="program-header">
+                        <h3>{{ $program->title }}</h3>
+                        <div class="program-price">
+                            <span class="price-amount">₹ {{ number_format($program->price, 2) }}</span>
+                            <span class="price-period">per person</span>
+                        </div>
+                    </div>
+
+                    <div class="program-duration">
+                        <i class="fas fa-clock"></i>
+                        <span>{{ $program->program_in_days }} Days Program</span>
+                    </div>
+
+                    <p>{{ Str::limit(strip_tags($program->description), 160) }}</p>
+
+                    {{-- Optional static features or you can add dynamic ones --}}
+                    <ul class="program-features">
+                        <li><i class="fas fa-leaf"></i> Daily yoga sessions</li>
+                        <li><i class="fas fa-moon"></i> Meditation workshops</li>
+                        <li><i class="fas fa-utensils"></i> Organic meals included</li>
+                    </ul>
+
+                    <a href="{{ route($program->slug) }}" class="btn {{ $program->button_type === 'primary' ? 'btn-primary' : 'btn-outline' }}">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>{{ $program->button_text ?? 'Apply Now' }}</span>
+                    </a>
                 </div>
             </div>
+            @endforeach
         </div>
     </div>
 </section>

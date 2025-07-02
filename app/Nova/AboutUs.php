@@ -55,8 +55,16 @@ class AboutUs extends Resource
             Text::make('Key Point 4'),
             Media::make('Banner Image', 'banner'),
             Media::make('Image', 'about-us'),
+            Media::make('Rishikesh Image', 'rishikesh'),
+            Trix::make('Rishikesh Description', 'rishikesh')->alwaysShow(),
         ];
     }
+
+    public static function label()
+    {
+        return 'About Us';
+    }
+
 
     /**
      * Get the cards available for the request.

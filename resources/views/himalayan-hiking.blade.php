@@ -57,8 +57,7 @@
 <section class="what-you-learn" style="padding: 5rem 0; background: var(--background-white);">
     <div class="container">
         <div class="section-header">
-            <span class="section-badge">Transform Your Practice</span>
-            <h2>What Will You Learn?</h2>
+            <span class="section-badge">What Will You Learn?</span>
             <div class="title-decoration">
                 <div class="decoration-line"></div>
                 <div class="decoration-om">🕉️</div>
@@ -114,219 +113,297 @@
     </div>
 </section>
 
-<!-- 9-Day Schedule Accordion -->
-<section class="about-us">
+<section class="retreat-info-combined" style="padding: 5rem 0; background: var(--background-light);">
     <div class="container">
         <div class="section-header">
-            <span class="section-badge">Daily Journey</span>
-            <h2>9-Day Retreat Schedule</h2>
+            <span class="section-badge">Retreat Information</span>
             <div class="title-decoration">
                 <div class="decoration-line"></div>
                 <div class="decoration-om">🕉️</div>
                 <div class="decoration-line"></div>
             </div>
             <div class="divider"></div>
-            <p>This is a sample itinerary. Times and activities may shift slightly due to weather, trail conditions, or other local factors.</p>
         </div>
 
-        <div class="schedule-accordion" style="max-width: 900px; margin: 0 auto;">
-            <!-- Day 1 -->
-            <div class="accordion-item">
-                <div class="accordion-header" onclick="toggleAccordion(this)">
-                    <div class="day-info">
-                        <span class="day-number">Day 1</span>
-                        <h3>Arrival & Grounding</h3>
-                    </div>
-                    <div class="accordion-icon">
-                        <i class="fas fa-chevron-down"></i>
+        <!-- Two Column Layout -->
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-bottom: 4rem;">
+
+            <!-- Left Column: What Makes This Retreat Special -->
+            <div class="retreat-features-left">
+                <div class="section-header" style="text-align: left; margin-bottom: 2rem;">
+                    <span class="section-badge">What Makes This Retreat Special</span>
+                    <div class="title-decoration" style="justify-content: flex-start;">
+                        <div class="decoration-line"></div>
+                        <div class="decoration-lotus">🪷</div>
+                        <div class="decoration-line"></div>
                     </div>
                 </div>
-                <div class="accordion-content">
-                    <div style="padding: 2rem;">
-                        <p><strong>Welcome & Check-in:</strong> Settle into our tranquil retreat space at your leisure.</p>
-                        <p><strong>Evening:</strong> Enjoy nourishing meals, explore the serene surroundings, connect with fellow participants, or simply relax and ground yourself in peace.</p>
+
+                <div class="feature-list">
+                    <div class="feature-list-item">
+                        <i class="fas fa-om"></i>
+                        <div>
+                            <h4>Holistic Yoga Practices</h4>
+                            <p>Daily sessions including Hatha, Vinyasa, and Yin Yoga</p>
+                        </div>
+                    </div>
+                    <div class="feature-list-item">
+                        <i class="fas fa-brain"></i>
+                        <div>
+                            <h4>Meditation & Pranayama</h4>
+                            <p>Techniques to enhance relaxation and mental clarity</p>
+                        </div>
+                    </div>
+                    <div class="feature-list-item">
+                        <i class="fas fa-book-open"></i>
+                        <div>
+                            <h4>Yogic Philosophy</h4>
+                            <p>Insights from Patanjali's Yoga Sutras and classical texts</p>
+                        </div>
+                    </div>
+                    <div class="feature-list-item">
+                        <i class="fas fa-user-md"></i>
+                        <div>
+                            <h4>Anatomy & Alignment</h4>
+                            <p>Understanding the human body to improve practice and prevent injuries</p>
+                        </div>
+                    </div>
+                    <div class="feature-list-item">
+                        <i class="fas fa-temple-hindu"></i>
+                        <div>
+                            <h4>Cultural Immersion</h4>
+                            <p>Visits to sacred sites and participation in traditional ceremonies</p>
+                        </div>
+                    </div>
+                    <div class="feature-list-item">
+                        <i class="fas fa-mountain"></i>
+                        <div>
+                            <h4>Nature Exploration</h4>
+                            <p>Hikes to picturesque locations like Devriya Tal and Chandrashila Peak</p>
+                        </div>
+                    </div>
+                    <div class="feature-list-item">
+                        <i class="fas fa-spa"></i>
+                        <div>
+                            <h4>Ayurvedic Treatments</h4>
+                            <p>Massages and therapies to rejuvenate the body</p>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Day 2 -->
-            <div class="accordion-item">
-                <div class="accordion-header" onclick="toggleAccordion(this)">
-                    <div class="day-info">
-                        <span class="day-number">Day 2</span>
-                        <h3>Initiation & Orientation</h3>
+            <!-- Right Column: 9-Day Schedule -->
+            <div class="schedule-right">
+                <div class="section-header" style="text-align: left; margin-bottom: 2rem;">
+                    <span class="section-badge">9-Day Retreat Schedule</span>
+                    <div class="title-decoration" style="justify-content: flex-start;">
+                        <div class="decoration-line"></div>
+                        <div class="decoration-om">🕉️</div>
+                        <div class="decoration-line"></div>
                     </div>
-                    <div class="accordion-icon">
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
+                    <p style="text-align: left; font-size: 0.9rem; color: var(--text-light);">This is a sample itinerary. Times and activities may shift slightly due to weather, trail conditions, or other local factors.</p>
                 </div>
-                <div class="accordion-content">
-                    <div style="padding: 2rem;">
-                        <p><strong>08:30 am</strong> - Breakfast</p>
-                        <p><strong>10:00 am</strong> - Fire Ceremony & Orientation: Participate in a traditional fire ceremony to set intentions</p>
-                        <p><strong>01:00 pm</strong> - Lunch</p>
-                        <p><strong>Afternoon</strong> - Ayurvedic Massage: Experience a rejuvenating massage</p>
-                        <p><strong>Evening</strong> - Ganga Aarti: Witness the mesmerizing river ceremony</p>
-                        <p><strong>08:00 pm</strong> - Dinner</p>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Day 3 -->
-            <div class="accordion-item">
-                <div class="accordion-header" onclick="toggleAccordion(this)">
-                    <div class="day-info">
-                        <span class="day-number">Day 3</span>
-                        <h3>Deepening Practice</h3>
+                <div class="schedule-accordion" style="display: flex; flex-direction: column; gap: 1rem;">
+                    <!-- Day 1 -->
+                    <div class="accordion-item" style="background: white; border-radius: 15px; box-shadow: var(--shadow-light); border: 1px solid var(--border-light); overflow: hidden; transition: all 0.3s ease;">
+                        <div class="accordion-header" onclick="toggleAccordion(this)" style="padding: 1.5rem 2rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--background-white); transition: all 0.3s ease;">
+                            <div class="day-info" style="display: flex; align-items: center; gap: 1rem;">
+                                <span class="day-number" style="background: var(--accent-color); color: white; padding: 0.5rem 1rem; border-radius: 50px; font-weight: 600; font-size: 0.875rem;">Day 1</span>
+                                <h3 style="margin: 0; font-size: 1.25rem; color: var(--text-dark);">Arrival & Grounding</h3>
+                            </div>
+                            <div class="accordion-icon" style="width: 40px; height: 40px; background: var(--background-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                                <i class="fas fa-chevron-down" style="color: var(--primary-color); transition: transform 0.3s ease;"></i>
+                            </div>
+                        </div>
+                        <div class="accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: var(--background-light);">
+                            <div style="padding: 2rem;">
+                                <p style="margin-bottom: 1rem; color: var(--text-light); line-height: 1.7;"><strong>Welcome & Check-in:</strong> Settle into our tranquil retreat space at your leisure.</p>
+                                <p style="margin: 0; color: var(--text-light); line-height: 1.7;"><strong>Evening:</strong> Enjoy nourishing meals, explore the serene surroundings, connect with fellow participants, or simply relax and ground yourself in peace.</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="accordion-icon">
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                </div>
-                <div class="accordion-content">
-                    <div style="padding: 2rem;">
-                        <p><strong>06:30 am</strong> - Cleansing Practice</p>
-                        <p><strong>07:00 am</strong> - Asana & Pranayama</p>
-                        <p><strong>08:30 am</strong> - Breakfast</p>
-                        <p><strong>11:00 am</strong> - Philosophy Class</p>
-                        <p><strong>01:00 pm</strong> - Lunch</p>
-                        <p><strong>Afternoon</strong> - Massage session</p>
-                        <p><strong>06:30 pm</strong> - Meditation Session</p>
-                        <p><strong>08:00 pm</strong> - Dinner</p>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Day 4 -->
-            <div class="accordion-item">
-                <div class="accordion-header" onclick="toggleAccordion(this)">
-                    <div class="day-info">
-                        <span class="day-number">Day 4</span>
-                        <h3>Himalayan Expedition Begins</h3>
+                    <!-- Day 2 -->
+                    <div class="accordion-item" style="background: white; border-radius: 15px; box-shadow: var(--shadow-light); border: 1px solid var(--border-light); overflow: hidden; transition: all 0.3s ease;">
+                        <div class="accordion-header" onclick="toggleAccordion(this)" style="padding: 1.5rem 2rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--background-white); transition: all 0.3s ease;">
+                            <div class="day-info" style="display: flex; align-items: center; gap: 1rem;">
+                                <span class="day-number" style="background: var(--accent-color); color: white; padding: 0.5rem 1rem; border-radius: 50px; font-weight: 600; font-size: 0.875rem;">Day 2</span>
+                                <h3 style="margin: 0; font-size: 1.25rem; color: var(--text-dark);">Initiation & Orientation</h3>
+                            </div>
+                            <div class="accordion-icon" style="width: 40px; height: 40px; background: var(--background-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                                <i class="fas fa-chevron-down" style="color: var(--primary-color); transition: transform 0.3s ease;"></i>
+                            </div>
+                        </div>
+                        <div class="accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: var(--background-light);">
+                            <div style="padding: 2rem;">
+                                <p style="margin-bottom: 0.75rem; color: var(--text-light); line-height: 1.7;"><strong>08:30 am</strong> - Breakfast</p>
+                                <p style="margin-bottom: 0.75rem; color: var(--text-light); line-height: 1.7;"><strong>10:00 am</strong> - Fire Ceremony & Orientation: Participate in a traditional fire ceremony to set intentions</p>
+                                <p style="margin-bottom: 0.75rem; color: var(--text-light); line-height: 1.7;"><strong>01:00 pm</strong> - Lunch</p>
+                                <p style="margin-bottom: 0.75rem; color: var(--text-light); line-height: 1.7;"><strong>Afternoon</strong> - Ayurvedic Massage: Experience a rejuvenating massage</p>
+                                <p style="margin-bottom: 0.75rem; color: var(--text-light); line-height: 1.7;"><strong>Evening</strong> - Ganga Aarti: Witness the mesmerizing river ceremony</p>
+                                <p style="margin: 0; color: var(--text-light); line-height: 1.7;"><strong>08:00 pm</strong> - Dinner</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="accordion-icon">
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                </div>
-                <div class="accordion-content">
-                    <div style="padding: 2rem;">
-                        <p><strong>06:00 am</strong> - Departure to the Himalayas</p>
-                        <p><strong>Midday</strong> - Visit Devprayag Sangam: Sacred confluence of rivers</p>
-                        <p><strong>Afternoon</strong> - Dhari Devi Temple Darshan</p>
-                        <p><strong>Evening</strong> - Hotel Check-in & exploration</p>
-                        <p><strong>08:00 pm</strong> - Dinner</p>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Day 5 -->
-            <div class="accordion-item">
-                <div class="accordion-header" onclick="toggleAccordion(this)">
-                    <div class="day-info">
-                        <span class="day-number">Day 5</span>
-                        <h3>Trek to Tungnath & Chandrashila</h3>
+                    <!-- Day 3 -->
+                    <div class="accordion-item" style="background: white; border-radius: 15px; box-shadow: var(--shadow-light); border: 1px solid var(--border-light); overflow: hidden; transition: all 0.3s ease;">
+                        <div class="accordion-header" onclick="toggleAccordion(this)" style="padding: 1.5rem 2rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--background-white); transition: all 0.3s ease;">
+                            <div class="day-info" style="display: flex; align-items: center; gap: 1rem;">
+                                <span class="day-number" style="background: var(--accent-color); color: white; padding: 0.5rem 1rem; border-radius: 50px; font-weight: 600; font-size: 0.875rem;">Day 3</span>
+                                <h3 style="margin: 0; font-size: 1.25rem; color: var(--text-dark);">Deepening Practice</h3>
+                            </div>
+                            <div class="accordion-icon" style="width: 40px; height: 40px; background: var(--background-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                                <i class="fas fa-chevron-down" style="color: var(--primary-color); transition: transform 0.3s ease;"></i>
+                            </div>
+                        </div>
+                        <div class="accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: var(--background-light);">
+                            <div style="padding: 2rem;">
+                                <p style="margin-bottom: 0.75rem; color: var(--text-light); line-height: 1.7;"><strong>06:30 am</strong> - Cleansing Practice</p>
+                                <p style="margin-bottom: 0.75rem; color: var(--text-light); line-height: 1.7;"><strong>07:00 am</strong> - Asana & Pranayama</p>
+                                <p style="margin-bottom: 0.75rem; color: var(--text-light); line-height: 1.7;"><strong>08:30 am</strong> - Breakfast</p>
+                                <p style="margin-bottom: 0.75rem; color: var(--text-light); line-height: 1.7;"><strong>11:00 am</strong> - Philosophy Class</p>
+                                <p style="margin-bottom: 0.75rem; color: var(--text-light); line-height: 1.7;"><strong>01:00 pm</strong> - Lunch</p>
+                                <p style="margin-bottom: 0.75rem; color: var(--text-light); line-height: 1.7;"><strong>Afternoon</strong> - Massage session</p>
+                                <p style="margin-bottom: 0.75rem; color: var(--text-light); line-height: 1.7;"><strong>06:30 pm</strong> - Meditation Session</p>
+                                <p style="margin: 0; color: var(--text-light); line-height: 1.7;"><strong>08:00 pm</strong> - Dinner</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="accordion-icon">
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                </div>
-                <div class="accordion-content">
-                    <div style="padding: 2rem;">
-                        <p><strong>06:00 am</strong> - Cleansing Practice</p>
-                        <p><strong>06:30 am</strong> - Yoga Session</p>
-                        <p><strong>08:00 am</strong> - Breakfast</p>
-                        <p><strong>Trek:</strong> 4 km to Tungnath Temple + 1-2 km to Chandrashila Peak</p>
-                        <p><strong>Elevation:</strong> ~600m + ~200m</p>
-                        <p><strong>Evening:</strong> Dinner, Night Session or Bonfire</p>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Day 6 -->
-            <div class="accordion-item">
-                <div class="accordion-header" onclick="toggleAccordion(this)">
-                    <div class="day-info">
-                        <span class="day-number">Day 6</span>
-                        <h3>Devriya Tal & Saari Village</h3>
+                    <!-- Day 4 -->
+                    <div class="accordion-item" style="background: white; border-radius: 15px; box-shadow: var(--shadow-light); border: 1px solid var(--border-light); overflow: hidden; transition: all 0.3s ease;">
+                        <div class="accordion-header" onclick="toggleAccordion(this)" style="padding: 1.5rem 2rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--background-white); transition: all 0.3s ease;">
+                            <div class="day-info" style="display: flex; align-items: center; gap: 1rem;">
+                                <span class="day-number" style="background: var(--accent-color); color: white; padding: 0.5rem 1rem; border-radius: 50px; font-weight: 600; font-size: 0.875rem;">Day 4</span>
+                                <h3 style="margin: 0; font-size: 1.25rem; color: var(--text-dark);">Himalayan Expedition Begins</h3>
+                            </div>
+                            <div class="accordion-icon" style="width: 40px; height: 40px; background: var(--background-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                                <i class="fas fa-chevron-down" style="color: var(--primary-color); transition: transform 0.3s ease;"></i>
+                            </div>
+                        </div>
+                        <div class="accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: var(--background-light);">
+                            <div style="padding: 2rem;">
+                                <p style="margin-bottom: 0.75rem; color: var(--text-light); line-height: 1.7;"><strong>06:00 am</strong> - Departure to the Himalayas</p>
+                                <p style="margin-bottom: 0.75rem; color: var(--text-light); line-height: 1.7;"><strong>Midday</strong> - Visit Devprayag Sangam: Sacred confluence of rivers</p>
+                                <p style="margin-bottom: 0.75rem; color: var(--text-light); line-height: 1.7;"><strong>Afternoon</strong> - Dhari Devi Temple Darshan</p>
+                                <p style="margin-bottom: 0.75rem; color: var(--text-light); line-height: 1.7;"><strong>Evening</strong> - Hotel Check-in & exploration</p>
+                                <p style="margin: 0; color: var(--text-light); line-height: 1.7;"><strong>08:00 pm</strong> - Dinner</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="accordion-icon">
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                </div>
-                <div class="accordion-content">
-                    <div style="padding: 2rem;">
-                        <p><strong>06:00 am</strong> - Cleansing Practice</p>
-                        <p><strong>06:30 am</strong> - Yoga Session</p>
-                        <p><strong>08:00 am</strong> - Breakfast</p>
-                        <p><strong>Trek:</strong> 3 km to Devriya Tal at 2438m elevation</p>
-                        <p><strong>Lunch:</strong> At Saari Village</p>
-                        <p><strong>Evening:</strong> Village walk, Dinner, Bonfire</p>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Day 7 -->
-            <div class="accordion-item">
-                <div class="accordion-header" onclick="toggleAccordion(this)">
-                    <div class="day-info">
-                        <span class="day-number">Day 7</span>
-                        <h3>Kartik Swami Temple</h3>
+                    <!-- Day 5 -->
+                    <div class="accordion-item" style="background: white; border-radius: 15px; box-shadow: var(--shadow-light); border: 1px solid var(--border-light); overflow: hidden; transition: all 0.3s ease;">
+                        <div class="accordion-header" onclick="toggleAccordion(this)" style="padding: 1.5rem 2rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--background-white); transition: all 0.3s ease;">
+                            <div class="day-info" style="display: flex; align-items: center; gap: 1rem;">
+                                <span class="day-number" style="background: var(--accent-color); color: white; padding: 0.5rem 1rem; border-radius: 50px; font-weight: 600; font-size: 0.875rem;">Day 5</span>
+                                <h3 style="margin: 0; font-size: 1.25rem; color: var(--text-dark);">Trek to Tungnath & Chandrashila</h3>
+                            </div>
+                            <div class="accordion-icon" style="width: 40px; height: 40px; background: var(--background-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                                <i class="fas fa-chevron-down" style="color: var(--primary-color); transition: transform 0.3s ease;"></i>
+                            </div>
+                        </div>
+                        <div class="accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: var(--background-light);">
+                            <div style="padding: 2rem;">
+                                <p style="margin-bottom: 0.75rem; color: var(--text-light); line-height: 1.7;"><strong>06:00 am</strong> - Cleansing Practice</p>
+                                <p style="margin-bottom: 0.75rem; color: var(--text-light); line-height: 1.7;"><strong>06:30 am</strong> - Yoga Session</p>
+                                <p style="margin-bottom: 0.75rem; color: var(--text-light); line-height: 1.7;"><strong>08:00 am</strong> - Breakfast</p>
+                                <p style="margin-bottom: 0.75rem; color: var(--text-light); line-height: 1.7;"><strong>Trek:</strong> 4 km to Tungnath Temple + 1-2 km to Chandrashila Peak</p>
+                                <p style="margin-bottom: 0.75rem; color: var(--text-light); line-height: 1.7;"><strong>Elevation:</strong> ~600m + ~200m</p>
+                                <p style="margin: 0; color: var(--text-light); line-height: 1.7;"><strong>Evening:</strong> Dinner, Night Session or Bonfire</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="accordion-icon">
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                </div>
-                <div class="accordion-content">
-                    <div style="padding: 2rem;">
-                        <p><strong>06:00 am</strong> - Cleansing Practice</p>
-                        <p><strong>06:30 am</strong> - Yoga Session</p>
-                        <p><strong>08:00 am</strong> - Breakfast</p>
-                        <p><strong>Trek:</strong> 3 km to Kartik Swami Temple at 3050m</p>
-                        <p><strong>Lunch:</strong> Traditional local meal</p>
-                        <p><strong>Evening:</strong> Dinner, Night Session</p>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Day 8 -->
-            <div class="accordion-item">
-                <div class="accordion-header" onclick="toggleAccordion(this)">
-                    <div class="day-info">
-                        <span class="day-number">Day 8</span>
-                        <h3>Return to Rishikesh</h3>
+                    <!-- Day 6 -->
+                    <div class="accordion-item" style="background: white; border-radius: 15px; box-shadow: var(--shadow-light); border: 1px solid var(--border-light); overflow: hidden; transition: all 0.3s ease;">
+                        <div class="accordion-header" onclick="toggleAccordion(this)" style="padding: 1.5rem 2rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--background-white); transition: all 0.3s ease;">
+                            <div class="day-info" style="display: flex; align-items: center; gap: 1rem;">
+                                <span class="day-number" style="background: var(--accent-color); color: white; padding: 0.5rem 1rem; border-radius: 50px; font-weight: 600; font-size: 0.875rem;">Day 6</span>
+                                <h3 style="margin: 0; font-size: 1.25rem; color: var(--text-dark);">Devriya Tal & Saari Village</h3>
+                            </div>
+                            <div class="accordion-icon" style="width: 40px; height: 40px; background: var(--background-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                                <i class="fas fa-chevron-down" style="color: var(--primary-color); transition: transform 0.3s ease;"></i>
+                            </div>
+                        </div>
+                        <div class="accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: var(--background-light);">
+                            <div style="padding: 2rem;">
+                                <p style="margin-bottom: 0.75rem; color: var(--text-light); line-height: 1.7;"><strong>06:00 am</strong> - Cleansing Practice</p>
+                                <p style="margin-bottom: 0.75rem; color: var(--text-light); line-height: 1.7;"><strong>06:30 am</strong> - Yoga Session</p>
+                                <p style="margin-bottom: 0.75rem; color: var(--text-light); line-height: 1.7;"><strong>08:00 am</strong> - Breakfast</p>
+                                <p style="margin-bottom: 0.75rem; color: var(--text-light); line-height: 1.7;"><strong>Trek:</strong> 3 km to Devriya Tal at 2438m elevation</p>
+                                <p style="margin-bottom: 0.75rem; color: var(--text-light); line-height: 1.7;"><strong>Lunch:</strong> At Saari Village</p>
+                                <p style="margin: 0; color: var(--text-light); line-height: 1.7;"><strong>Evening:</strong> Village walk, Dinner, Bonfire</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="accordion-icon">
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                </div>
-                <div class="accordion-content">
-                    <div style="padding: 2rem;">
-                        <p><strong>09:00 am</strong> - Breakfast</p>
-                        <p><strong>Departure</strong> to Rishikesh</p>
-                        <p><strong>Lunch</strong> En Route</p>
-                        <p><strong>08:00 pm</strong> - Dinner at the Ashram</p>
-                    </div>
-                </div>
-            </div>
 
-            <!-- Day 9 -->
-            <div class="accordion-item">
-                <div class="accordion-header" onclick="toggleAccordion(this)">
-                    <div class="day-info">
-                        <span class="day-number">Day 9</span>
-                        <h3>Closure & Farewell</h3>
+                    <!-- Day 7 -->
+                    <div class="accordion-item" style="background: white; border-radius: 15px; box-shadow: var(--shadow-light); border: 1px solid var(--border-light); overflow: hidden; transition: all 0.3s ease;">
+                        <div class="accordion-header" onclick="toggleAccordion(this)" style="padding: 1.5rem 2rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--background-white); transition: all 0.3s ease;">
+                            <div class="day-info" style="display: flex; align-items: center; gap: 1rem;">
+                                <span class="day-number" style="background: var(--accent-color); color: white; padding: 0.5rem 1rem; border-radius: 50px; font-weight: 600; font-size: 0.875rem;">Day 7</span>
+                                <h3 style="margin: 0; font-size: 1.25rem; color: var(--text-dark);">Kartik Swami Temple</h3>
+                            </div>
+                            <div class="accordion-icon" style="width: 40px; height: 40px; background: var(--background-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                                <i class="fas fa-chevron-down" style="color: var(--primary-color); transition: transform 0.3s ease;"></i>
+                            </div>
+                        </div>
+                        <div class="accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: var(--background-light);">
+                            <div style="padding: 2rem;">
+                                <p style="margin-bottom: 0.75rem; color: var(--text-light); line-height: 1.7;"><strong>06:00 am</strong> - Cleansing Practice</p>
+                                <p style="margin-bottom: 0.75rem; color: var(--text-light); line-height: 1.7;"><strong>06:30 am</strong> - Yoga Session</p>
+                                <p style="margin-bottom: 0.75rem; color: var(--text-light); line-height: 1.7;"><strong>08:00 am</strong> - Breakfast</p>
+                                <p style="margin-bottom: 0.75rem; color: var(--text-light); line-height: 1.7;"><strong>Trek:</strong> 3 km to Kartik Swami Temple at 3050m</p>
+                                <p style="margin-bottom: 0.75rem; color: var(--text-light); line-height: 1.7;"><strong>Lunch:</strong> Traditional local meal</p>
+                                <p style="margin: 0; color: var(--text-light); line-height: 1.7;"><strong>Evening:</strong> Dinner, Night Session</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="accordion-icon">
-                        <i class="fas fa-chevron-down"></i>
+
+                    <!-- Day 8 -->
+                    <div class="accordion-item" style="background: white; border-radius: 15px; box-shadow: var(--shadow-light); border: 1px solid var(--border-light); overflow: hidden; transition: all 0.3s ease;">
+                        <div class="accordion-header" onclick="toggleAccordion(this)" style="padding: 1.5rem 2rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--background-white); transition: all 0.3s ease;">
+                            <div class="day-info" style="display: flex; align-items: center; gap: 1rem;">
+                                <span class="day-number" style="background: var(--accent-color); color: white; padding: 0.5rem 1rem; border-radius: 50px; font-weight: 600; font-size: 0.875rem;">Day 8</span>
+                                <h3 style="margin: 0; font-size: 1.25rem; color: var(--text-dark);">Return to Rishikesh</h3>
+                            </div>
+                            <div class="accordion-icon" style="width: 40px; height: 40px; background: var(--background-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                                <i class="fas fa-chevron-down" style="color: var(--primary-color); transition: transform 0.3s ease;"></i>
+                            </div>
+                        </div>
+                        <div class="accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: var(--background-light);">
+                            <div style="padding: 2rem;">
+                                <p style="margin-bottom: 0.75rem; color: var(--text-light); line-height: 1.7;"><strong>09:00 am</strong> - Breakfast</p>
+                                <p style="margin-bottom: 0.75rem; color: var(--text-light); line-height: 1.7;"><strong>Departure</strong> to Rishikesh</p>
+                                <p style="margin-bottom: 0.75rem; color: var(--text-light); line-height: 1.7;"><strong>Lunch</strong> En Route</p>
+                                <p style="margin: 0; color: var(--text-light); line-height: 1.7;"><strong>08:00 pm</strong> - Dinner at the Ashram</p>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="accordion-content">
-                    <div style="padding: 2rem;">
-                        <p><strong>07:00 am</strong> - Final Yoga Session</p>
-                        <p><strong>08:30 am</strong> - Breakfast</p>
-                        <p><strong>10:00 am</strong> - Closing Ceremony: Reflect on your journey</p>
-                        <div style="margin-top: 1rem; padding: 1rem; background: var(--background-light); border-radius: 8px;">
-                            <small><em>Note: The schedule for the last day may be adjusted to allow relaxation time. Changes will be discussed on Day 8.</em></small>
+
+                    <!-- Day 9 -->
+                    <div class="accordion-item" style="background: white; border-radius: 15px; box-shadow: var(--shadow-light); border: 1px solid var(--border-light); overflow: hidden; transition: all 0.3s ease;">
+                        <div class="accordion-header" onclick="toggleAccordion(this)" style="padding: 1.5rem 2rem; cursor: pointer; display: flex; justify-content: space-between; align-items: center; background: var(--background-white); transition: all 0.3s ease;">
+                            <div class="day-info" style="display: flex; align-items: center; gap: 1rem;">
+                                <span class="day-number" style="background: var(--accent-color); color: white; padding: 0.5rem 1rem; border-radius: 50px; font-weight: 600; font-size: 0.875rem;">Day 9</span>
+                                <h3 style="margin: 0; font-size: 1.25rem; color: var(--text-dark);">Closure & Farewell</h3>
+                            </div>
+                            <div class="accordion-icon" style="width: 40px; height: 40px; background: var(--background-light); border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: all 0.3s ease;">
+                                <i class="fas fa-chevron-down" style="color: var(--primary-color); transition: transform 0.3s ease;"></i>
+                            </div>
+                        </div>
+                        <div class="accordion-content" style="max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: var(--background-light);">
+                            <div style="padding: 2rem;">
+                                <p style="margin-bottom: 0.75rem; color: var(--text-light); line-height: 1.7;"><strong>07:00 am</strong> - Final Yoga Session</p>
+                                <p style="margin-bottom: 0.75rem; color: var(--text-light); line-height: 1.7;"><strong>08:30 am</strong> - Breakfast</p>
+                                <p style="margin-bottom: 0.75rem; color: var(--text-light); line-height: 1.7;"><strong>10:00 am</strong> - Closing Ceremony: Reflect on your journey</p>
+                                <div style="margin-top: 1rem; padding: 1rem; background: var(--background-light); border-radius: 8px;">
+                                    <small style="color: var(--text-light);"><em>Note: The schedule for the last day may be adjusted to allow relaxation time. Changes will be discussed on Day 8.</em></small>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -335,71 +412,198 @@
     </div>
 </section>
 
-<!-- Retreat Features - Simple List Format -->
-<section class="retreat-features-simple" style="padding: 5rem 0; background: var(--background-light);">
+<!-- Upcoming Dates Calendar -->
+<section class="upcoming-dates" style="padding: 5rem 0; background: var(--background-white);">
     <div class="container">
         <div class="section-header">
-            <span class="section-badge">Retreat Features</span>
-            <h2>What Makes This Retreat Special</h2>
+            <span class="section-badge">Upcoming Retreat Dates</span>
             <div class="title-decoration">
                 <div class="decoration-line"></div>
                 <div class="decoration-lotus">🪷</div>
                 <div class="decoration-line"></div>
             </div>
             <div class="divider"></div>
+            <p>Choose your preferred dates and accommodation type for the upcoming retreats</p>
         </div>
 
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 2rem; max-width: 1000px; margin: 0 auto;">
-            <div class="feature-list">
-                <div class="feature-list-item">
-                    <i class="fas fa-om"></i>
-                    <div>
-                        <h4>Holistic Yoga Practices</h4>
-                        <p>Daily sessions including Hatha, Vinyasa, and Yin Yoga</p>
+        <!-- Calendar Table -->
+        <div class="dates-calendar" style="background: white; border-radius: 15px; box-shadow: var(--shadow-light); overflow: hidden; border: 1px solid var(--border-light);">
+            <!-- Table Header -->
+            <div class="calendar-header" style="background: linear-gradient(135deg, var(--primary-color), var(--primary-light)); color: white; padding: 1.5rem; display: grid; grid-template-columns: 2fr 1.5fr 1.5fr 1fr; gap: 1rem; font-weight: 600; text-align: center;">
+                <div>Retreat Dates</div>
+                <div>Shared Room</div>
+                <div>Private Room</div>
+                <div>Booking</div>
+            </div>
+
+            <!-- Calendar Rows -->
+            <div class="calendar-row" style="display: grid; grid-template-columns: 2fr 1.5fr 1.5fr 1fr; gap: 1rem; padding: 1.5rem; border-bottom: 1px solid var(--border-light); align-items: center;">
+                <div class="date-info">
+                    <div style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">March 15 - 23, 2024</div>
+                    <div style="font-size: 0.875rem; color: var(--text-light);">9 Days • Spring Season</div>
+                    <div style="font-size: 0.75rem; color: var(--primary-color); margin-top: 0.25rem;">
+                        <i class="fas fa-users"></i> 8 spots available
                     </div>
                 </div>
-                <div class="feature-list-item">
-                    <i class="fas fa-brain"></i>
-                    <div>
-                        <h4>Meditation & Pranayama</h4>
-                        <p>Techniques to enhance relaxation and mental clarity</p>
-                    </div>
+                <div class="room-price" style="text-align: center;">
+                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary-color); margin-bottom: 0.25rem;">$899</div>
+                    <div style="font-size: 0.75rem; color: var(--text-light);">per person</div>
                 </div>
-                <div class="feature-list-item">
-                    <i class="fas fa-book-open"></i>
-                    <div>
-                        <h4>Yogic Philosophy</h4>
-                        <p>Insights from Patanjali's Yoga Sutras and classical texts</p>
-                    </div>
+                <div class="room-price" style="text-align: center;">
+                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary-color); margin-bottom: 0.25rem;">$1,299</div>
+                    <div style="font-size: 0.75rem; color: var(--text-light);">per person</div>
                 </div>
-                <div class="feature-list-item">
-                    <i class="fas fa-user-md"></i>
-                    <div>
-                        <h4>Anatomy & Alignment</h4>
-                        <p>Understanding the human body to improve practice and prevent injuries</p>
-                    </div>
+                <div class="booking-btn" style="text-align: center;">
+                    <button class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.875rem;">
+                        Apply Now
+                    </button>
                 </div>
             </div>
-            <div class="feature-list">
-                <div class="feature-list-item">
-                    <i class="fas fa-temple-hindu"></i>
-                    <div>
-                        <h4>Cultural Immersion</h4>
-                        <p>Visits to sacred sites and participation in traditional ceremonies</p>
+
+            <div class="calendar-row" style="display: grid; grid-template-columns: 2fr 1.5fr 1.5fr 1fr; gap: 1rem; padding: 1.5rem; border-bottom: 1px solid var(--border-light); align-items: center;">
+                <div class="date-info">
+                    <div style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">April 12 - 20, 2024</div>
+                    <div style="font-size: 0.875rem; color: var(--text-light);">9 Days • Spring Season</div>
+                    <div style="font-size: 0.75rem; color: var(--primary-color); margin-top: 0.25rem;">
+                        <i class="fas fa-users"></i> 5 spots available
                     </div>
                 </div>
-                <div class="feature-list-item">
-                    <i class="fas fa-mountain"></i>
-                    <div>
-                        <h4>Nature Exploration</h4>
-                        <p>Hikes to picturesque locations like Devriya Tal and Chandrashila Peak</p>
+                <div class="room-price" style="text-align: center;">
+                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary-color); margin-bottom: 0.25rem;">$899</div>
+                    <div style="font-size: 0.75rem; color: var(--text-light);">per person</div>
+                </div>
+                <div class="room-price" style="text-align: center;">
+                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary-color); margin-bottom: 0.25rem;">$1,299</div>
+                    <div style="font-size: 0.75rem; color: var(--text-light);">per person</div>
+                </div>
+                <div class="booking-btn" style="text-align: center;">
+                    <button class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.875rem;">
+                        Apply Now
+                    </button>
+                </div>
+            </div>
+
+            <div class="calendar-row" style="display: grid; grid-template-columns: 2fr 1.5fr 1.5fr 1fr; gap: 1rem; padding: 1.5rem; border-bottom: 1px solid var(--border-light); align-items: center;">
+                <div class="date-info">
+                    <div style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">May 18 - 26, 2024</div>
+                    <div style="font-size: 0.875rem; color: var(--text-light);">9 Days • Summer Season</div>
+                    <div style="font-size: 0.75rem; color: var(--primary-color); margin-top: 0.25rem;">
+                        <i class="fas fa-users"></i> 12 spots available
                     </div>
                 </div>
-                <div class="feature-list-item">
-                    <i class="fas fa-spa"></i>
-                    <div>
-                        <h4>Ayurvedic Treatments</h4>
-                        <p>Massages and therapies to rejuvenate the body</p>
+                <div class="room-price" style="text-align: center;">
+                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary-color); margin-bottom: 0.25rem;">$949</div>
+                    <div style="font-size: 0.75rem; color: var(--text-light);">per person</div>
+                </div>
+                <div class="room-price" style="text-align: center;">
+                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary-color); margin-bottom: 0.25rem;">$1,349</div>
+                    <div style="font-size: 0.75rem; color: var(--text-light);">per person</div>
+                </div>
+                <div class="booking-btn" style="text-align: center;">
+                    <button class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.875rem;">
+                        Apply Now
+                    </button>
+                </div>
+            </div>
+
+            <div class="calendar-row" style="display: grid; grid-template-columns: 2fr 1.5fr 1.5fr 1fr; gap: 1rem; padding: 1.5rem; border-bottom: 1px solid var(--border-light); align-items: center;">
+                <div class="date-info">
+                    <div style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">June 22 - 30, 2024</div>
+                    <div style="font-size: 0.875rem; color: var(--text-light);">9 Days • Summer Season</div>
+                    <div style="font-size: 0.75rem; color: var(--primary-color); margin-top: 0.25rem;">
+                        <i class="fas fa-users"></i> 7 spots available
+                    </div>
+                </div>
+                <div class="room-price" style="text-align: center;">
+                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary-color); margin-bottom: 0.25rem;">$949</div>
+                    <div style="font-size: 0.75rem; color: var(--text-light);">per person</div>
+                </div>
+                <div class="room-price" style="text-align: center;">
+                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary-color); margin-bottom: 0.25rem;">$1,349</div>
+                    <div style="font-size: 0.75rem; color: var(--text-light);">per person</div>
+                </div>
+                <div class="booking-btn" style="text-align: center;">
+                    <button class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.875rem;">
+                        Apply Now
+                    </button>
+                </div>
+            </div>
+
+            <div class="calendar-row" style="display: grid; grid-template-columns: 2fr 1.5fr 1.5fr 1fr; gap: 1rem; padding: 1.5rem; border-bottom: 1px solid var(--border-light); align-items: center;">
+                <div class="date-info">
+                    <div style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">September 15 - 23, 2024</div>
+                    <div style="font-size: 0.875rem; color: var(--text-light);">9 Days • Autumn Season</div>
+                    <div style="font-size: 0.75rem; color: var(--primary-color); margin-top: 0.25rem;">
+                        <i class="fas fa-users"></i> 10 spots available
+                    </div>
+                </div>
+                <div class="room-price" style="text-align: center;">
+                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary-color); margin-bottom: 0.25rem;">$899</div>
+                    <div style="font-size: 0.75rem; color: var(--text-light);">per person</div>
+                </div>
+                <div class="room-price" style="text-align: center;">
+                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary-color); margin-bottom: 0.25rem;">$1,299</div>
+                    <div style="font-size: 0.75rem; color: var(--text-light);">per person</div>
+                </div>
+                <div class="booking-btn" style="text-align: center;">
+                    <button class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.875rem;">
+                        Apply Now
+                    </button>
+                </div>
+            </div>
+
+            <div class="calendar-row" style="display: grid; grid-template-columns: 2fr 1.5fr 1.5fr 1fr; gap: 1rem; padding: 1.5rem; align-items: center;">
+                <div class="date-info">
+                    <div style="font-weight: 600; color: var(--text-dark); margin-bottom: 0.5rem;">October 20 - 28, 2024</div>
+                    <div style="font-size: 0.875rem; color: var(--text-light);">9 Days • Autumn Season</div>
+                    <div style="font-size: 0.75rem; color: var(--primary-color); margin-top: 0.25rem;">
+                        <i class="fas fa-users"></i> 6 spots available
+                    </div>
+                </div>
+                <div class="room-price" style="text-align: center;">
+                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary-color); margin-bottom: 0.25rem;">$899</div>
+                    <div style="font-size: 0.75rem; color: var(--text-light);">per person</div>
+                </div>
+                <div class="room-price" style="text-align: center;">
+                    <div style="font-size: 1.5rem; font-weight: 700; color: var(--primary-color); margin-bottom: 0.25rem;">$1,299</div>
+                    <div style="font-size: 0.75rem; color: var(--text-light);">per person</div>
+                </div>
+                <div class="booking-btn" style="text-align: center;">
+                    <button class="btn btn-primary" style="padding: 0.75rem 1.5rem; font-size: 0.875rem;">
+                        Apply Now
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Info -->
+        <div style="text-align: center; margin-top: 3rem;">
+            <div style="background: var(--background-light); padding: 2rem; border-radius: 15px; margin-bottom: 2rem;">
+                <h3 style="color: var(--primary-color); margin-bottom: 1rem;">What's Included</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1rem; text-align: left;">
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-check" style="color: var(--primary-color);"></i>
+                        <span>All meals & accommodation</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-check" style="color: var(--primary-color);"></i>
+                        <span>Daily yoga & meditation</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-check" style="color: var(--primary-color);"></i>
+                        <span>Himalayan treks & excursions</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-check" style="color: var(--primary-color);"></i>
+                        <span>Ayurvedic treatments</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-check" style="color: var(--primary-color);"></i>
+                        <span>Transportation during retreat</span>
+                    </div>
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <i class="fas fa-check" style="color: var(--primary-color);"></i>
+                        <span>Certificate of completion</span>
                     </div>
                 </div>
             </div>
@@ -411,8 +615,7 @@
 <section class="about-us">
     <div class="container">
         <div class="section-header">
-            <span class="section-badge">Be Prepared</span>
-            <h2>Essential Packing List</h2>
+            <span class="section-badge">Essential Packing List</span>
             <div class="title-decoration">
                 <div class="decoration-line"></div>
                 <div class="decoration-om">🕉️</div>
@@ -642,8 +845,7 @@
 <section class="our-teams">
     <div class="container">
         <div class="section-header">
-            <span class="section-badge">Travel Info</span>
-            <h2>Arrival & Departure Details</h2>
+            <span class="section-badge">Arrival & Departure Details</span>
             <div class="title-decoration">
                 <div class="decoration-line"></div>
                 <div class="decoration-lotus">🪷</div>
@@ -721,8 +923,7 @@
 <section class="post-retreat-benefits" style="padding: 5rem 0; background: var(--background-white);">
     <div class="container">
         <div class="section-header">
-            <span class="section-badge">Lasting Transformation</span>
-            <h2>What Will You Get After The Retreat?</h2>
+            <span class="section-badge">What Will You Get After The Retreat?</span>
             <div class="title-decoration">
                 <div class="decoration-line"></div>
                 <div class="decoration-lotus">🪷</div>
@@ -771,8 +972,7 @@
 <section class="small-group-advantage" style="padding: 5rem 0; background: var(--background-light);">
     <div class="container">
         <div class="section-header">
-            <span class="section-badge">Personalized Experience</span>
-            <h2>Smaller Group For Your Advantage</h2>
+            <span class="section-badge">Smaller Group For Your Advantage</span>
             <div class="title-decoration">
                 <div class="decoration-line"></div>
                 <div class="decoration-om">🕉️</div>
@@ -811,8 +1011,7 @@
 <section class="our-stays">
     <div class="container">
         <div class="section-header">
-            <span class="section-badge">Your Stay</span>
-            <h2>Comfortable Accommodations</h2>
+            <span class="section-badge">Our Stay</span>
             <div class="title-decoration">
                 <div class="decoration-line"></div>
                 <div class="decoration-om">🕉️</div>
@@ -884,80 +1083,11 @@
     </div>
 </section>
 
-<!-- Sacred Sites with Modals -->
-<section class="our-teams">
-    <div class="container">
-        <div class="section-header">
-            <span class="section-badge">Sacred Journey</span>
-            <h2>Sacred Sites & Temples We'll Visit</h2>
-            <div class="title-decoration">
-                <div class="decoration-line"></div>
-                <div class="decoration-lotus">🪷</div>
-                <div class="decoration-line"></div>
-            </div>
-            <div class="divider"></div>
-        </div>
-
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
-            @forelse($nearBy as $site)
-            <div class="site-card" onclick="openModal('site{{ $site->id }}Modal')">
-                <div class="site-image">
-                    @if($site->media->isNotEmpty())
-                    <img src="{{ $site->media->first()->getUrl() }}" alt="{{ $site->name }}">
-                    @else
-                    <img src="/placeholder.svg?height=250&width=350" alt="{{ $site->name }}">
-                    @endif
-                    <div class="site-overlay">
-                        <span>Learn More</span>
-                    </div>
-                </div>
-                <div class="site-content">
-                    <h3>{{ $site->name }}</h3>
-                    <p>{{ Str::limit($site->description, 100) }}</p>
-                    <div class="site-tags">
-                        <span class="tag">{{ $site->distance }}</span>
-                        @php
-                        // Extract tags from description or create default ones
-                        $tags = $site->tags ?? ['Sacred Site', 'Spiritual'];
-                        @endphp
-                        @if(is_array($tags))
-                        @foreach(array_slice($tags, 0, 2) as $tag)
-                        <span class="tag">{{ $tag }}</span>
-                        @endforeach
-                        @endif
-                    </div>
-                </div>
-            </div>
-            @empty
-            <!-- Fallback content if no nearby sites exist -->
-            <div class="site-card">
-                <div class="site-image">
-                    <img src="/placeholder.svg?height=250&width=350" alt="Sacred Sites">
-                    <div class="site-overlay">
-                        <span>Coming Soon</span>
-                    </div>
-                </div>
-                <div class="site-content">
-                    <h3>Sacred Sites Coming Soon</h3>
-                    <p>We're preparing amazing sacred sites for your spiritual journey.</p>
-                    <div class="site-tags">
-                        <span class="tag">Sacred Journey</span>
-                        <span class="tag">Spiritual</span>
-                    </div>
-                </div>
-            </div>
-            @endforelse
-        </div>
-    </div>
-</section>
-
-<!-- Dynamic Modals for each site -->
 <!-- Updated Blade Template Section -->
 <section class="our-teams">
     <div class="container">
         <div class="section-header">
-            <span class="section-badge">Sacred Journey</span>
-            <h2>Sacred Sites & Temples We'll Visit</h2>
+            <span class="section-badge">Sacred Sites & Temples We'll Visit</span>
             <div class="title-decoration">
                 <div class="decoration-line"></div>
                 <div class="decoration-lotus">🪷</div>
@@ -1031,8 +1161,7 @@
 <section class="other-retreats" style="padding: 5rem 0; background: var(--background-white);">
     <div class="container">
         <div class="section-header">
-            <span class="section-badge">Discover More</span>
-            <h2>Other Retreats</h2>
+            <span class="section-badge">Other Retreats</span>
             <div class="title-decoration">
                 <div class="decoration-line"></div>
                 <div class="decoration-lotus">🪷</div>
@@ -1087,12 +1216,74 @@
     </div>
 </section>
 
+<!-- Retreat Programs Section -->
+<section class="retreat-programs" id="programs">
+    <div class="container">
+        <div class="section-header">
+            <div class="section-mandala programs-mandala-left"></div>
+            <span class="section-badge">Other Retreat Programs</span>
+            <div class="title-decoration">
+                <div class="decoration-line"></div>
+                <div class="decoration-lotus">🪷</div>
+                <div class="decoration-line"></div>
+            </div>
+            <div class="divider"></div>
+            <p>Discover our carefully crafted retreat programs designed to rejuvenate your mind, body, and soul.</p>
+        </div>
+        <div class="programs-container">
+            @foreach($otherRetreats as $index => $program)
+            <div class="program-card {{ $index === 0 ? 'featured' : '' }}">
+                <div class="section-mandala {{ $index % 2 === 0 ? 'programs-mandala-left' : 'programs-mandala-right' }}"></div>
+
+                @if($index === 0)
+                <div class="program-badge">Most Popular</div>
+                @endif
+
+                <div class="program-image">
+                    <img src="{{ $program->getUploadedMedia()?->getUrl() ?? '/placeholder.svg' }}" alt="{{ $program->title }}">
+                    <div class="program-image-overlay"></div>
+                </div>
+
+                <div class="program-content">
+                    <div class="program-header">
+                        <h3>{{ $program->title }}</h3>
+                        <div class="program-price">
+                            <span class="price-amount">₹ {{ number_format($program->price, 2) }}</span>
+                            <span class="price-period">per person</span>
+                        </div>
+                    </div>
+
+                    <div class="program-duration">
+                        <i class="fas fa-clock"></i>
+                        <span>{{ $program->program_in_days }} Days Program</span>
+                    </div>
+
+                    <p>{{ Str::limit(strip_tags($program->description), 160) }}</p>
+
+                    {{-- Optional static features or you can add dynamic ones --}}
+                    <ul class="program-features">
+                        <li><i class="fas fa-leaf"></i> Daily yoga sessions</li>
+                        <li><i class="fas fa-moon"></i> Meditation workshops</li>
+                        <li><i class="fas fa-utensils"></i> Organic meals included</li>
+                    </ul>
+
+                    <a href="{{ route($program->slug) }}" class="btn {{ $program->button_type === 'primary' ? 'btn-primary' : 'btn-outline' }}">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>{{ $program->button_text ?? 'Apply Now' }}</span>
+                    </a>
+                </div>
+            </div>
+            @endforeach
+        </div>
+    </div>
+</section>
+
+
 <!-- Call to Action -->
 <section class="cta">
     <div class="container">
         <div class="cta-content">
             <span class="section-badge">Limited Spaces Available</span>
-            <h2>Begin Your Transformative Journey</h2>
             <p>Join our upcoming 9-Day Himalayan Hiking Yoga Retreat and experience a profound shift in your practice and perspective. Spaces are limited to ensure a personalized experience.</p>
             <div class="cta-buttons">
                 <a href="mailto:adisheshyoga@gmail.com" class="btn btn-primary">
@@ -1122,188 +1313,103 @@
     </div>
 </section>
 
-<!-- Sacred Sites Modals (Only modals for temples) -->
-<div id="devprayagModal" class="modal">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h2>Devprayag Sangam</h2>
-            <span class="close" onclick="closeModal('devprayagModal')">&times;</span>
-        </div>
-        <div class="modal-body">
-            <h3>Where Rivers Merge & Spirits Awaken</h3>
-            <p>At the heart of the Indian Himalayas, where the Alaknanda and Bhagirathi rivers converge, lies Devprayag—a revered confluence known as the spiritual birthplace of the River Ganga.</p>
+<!-- Add responsive styles -->
+<style>
+    @media (max-width: 1024px) {
+        .retreat-info-combined .container>div:nth-child(2) {
+            grid-template-columns: 1fr !important;
+            gap: 3rem !important;
+        }
 
-            <h3>Spiritual Significance:</h3>
-            <ul>
-                <li>Sacred birthplace of the holy Ganga River</li>
-                <li>Starting point of the Panch Prayag Yatra</li>
-                <li>Merging of divine energies and purification</li>
-                <li>Ancient Tondeshwar Mahadev Temple overlooks the confluence</li>
-            </ul>
+        .dates-calendar {
+            max-width: 100% !important;
+        }
 
-            <h3>What You'll Experience:</h3>
-            <ul>
-                <li>Witness the sacred confluence of two holy rivers</li>
-                <li>Feel the profound spiritual energy of the meeting waters</li>
-                <li>Visit the ancient temple dedicated to Lord Shiva</li>
-                <li>Participate in traditional prayers and ceremonies</li>
-            </ul>
+        .calendar-header,
+        .calendar-row {
+            grid-template-columns: 1fr !important;
+            gap: 1rem !important;
+            text-align: center !important;
+        }
 
-            <h3>Cultural & Natural Beauty:</h3>
-            <p>Located in Tehri Garhwal, Uttarakhand, Devprayag is surrounded by lush green hills and steep mountain valleys, offering both spiritual significance and breathtaking natural beauty.</p>
-        </div>
-    </div>
-</div>
+        .date-info {
+            text-align: center !important;
+            margin-bottom: 1rem;
+        }
+    }
 
-<div id="dhariDeviModal" class="modal">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h2>Dhari Devi Temple</h2>
-            <span class="close" onclick="closeModal('dhariDeviModal')">&times;</span>
-        </div>
-        <div class="modal-body">
-            <h3>Guardian Goddess of the Himalayas</h3>
-            <p>Dhari Devi Temple is revered as the protector of the Char Dham pilgrimage, where the goddess is believed to change form throughout the day - from a young girl in the morning to an elderly lady by evening.</p>
+    @media (max-width: 768px) {
+        .feature-list {
+            padding: 2rem !important;
+        }
 
-            <h3>Divine Significance:</h3>
-            <ul>
-                <li>Manifestation of Goddess Kali in open-air sanctum</li>
-                <li>Guardian deity of the Char Dham Yatra</li>
-                <li>Believed to protect devotees from natural calamities</li>
-                <li>Sacred site where the goddess changes forms daily</li>
-            </ul>
+        .feature-list-item {
+            flex-direction: column !important;
+            text-align: center !important;
+            gap: 1rem !important;
+        }
 
-            <h3>Unique Features:</h3>
-            <ul>
-                <li>Only temple where the deity is in open air</li>
-                <li>Goddess statue changes appearance throughout the day</li>
-                <li>Located on the banks of the Alaknanda River</li>
-                <li>Surrounded by mystical hills and spiritual energy</li>
-            </ul>
+        .calendar-header,
+        .calendar-row {
+            padding: 1.5rem !important;
+        }
 
-            <h3>Spiritual Experience:</h3>
-            <p>Devotees believe that seeking blessings from Dhari Devi provides divine protection during their Himalayan journey and ensures safe passage through the sacred mountains.</p>
-        </div>
-    </div>
-</div>
+        .room-price>div:first-child {
+            font-size: 1.5rem !important;
+        }
 
-<div id="tungnathModal" class="modal">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h2>Tungnath Temple</h2>
-            <span class="close" onclick="closeModal('tungnathModal')">&times;</span>
-        </div>
-        <div class="modal-body">
-            <h3>Highest Shiva Temple in the World</h3>
-            <p>Perched at 3,680 meters, Tungnath Temple stands as the highest Shiva temple on Earth. Over 1,000 years old, this ancient sanctuary was discovered by Adi Shankaracharya and represents the spiritual pinnacle of devotion.</p>
+        .btn {
+            padding: 0.75rem 1.25rem !important;
+            font-size: 0.875rem !important;
+        }
+    }
 
-            <h3>Sacred History:</h3>
-            <ul>
-                <li>Part of the Panch Kedar pilgrimage circuit</li>
-                <li>Built by the Pandavas to worship Lord Shiva</li>
-                <li>Discovered and renovated by Adi Shankaracharya</li>
-                <li>Represents the arms of Lord Shiva</li>
-            </ul>
+    @media (max-width: 576px) {
+        .section-header .section-badge {
+            font-size: 0.8rem !important;
+            padding: 0.6rem 1.2rem !important;
+        }
 
-            <h3>The Trek Experience:</h3>
-            <ul>
-                <li>4km moderate trek through enchanting meadows</li>
-                <li>Elevation gain of approximately 600 meters</li>
-                <li>Path lined with rhododendrons and alpine flowers</li>
-                <li>Breathtaking views of Nanda Devi and Chaukhamba peaks</li>
-            </ul>
+        .feature-list {
+            padding: 1.5rem !important;
+        }
 
-            <h3>Chandrashila Summit:</h3>
-            <p>An additional 1-2km trek from Tungnath leads to Chandrashila Peak, offering 360-degree panoramic views of the Himalayan ranges including Nanda Devi, Trishul, Kedar Peak, and Bandarpunch.</p>
+        .accordion-header {
+            padding: 1.25rem 1.5rem !important;
+        }
 
-            <h3>Spiritual Significance:</h3>
-            <p>The temple remains open only during summer months due to extreme weather. Devotees believe that prayers offered here have special significance due to the temple's proximity to the divine realm.</p>
-        </div>
-    </div>
-</div>
+        .day-info h3 {
+            font-size: 1rem !important;
+        }
 
-<div id="devriyaTalModal" class="modal">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h2>Devriya Tal</h2>
-            <span class="close" onclick="closeModal('devriyaTalModal')">&times;</span>
-        </div>
-        <div class="modal-body">
-            <h3>Lake of Epics, Myths, Gods & Himalayas</h3>
-            <p>Devriya Tal, situated at 2,438 meters, is a crystal-clear lake that perfectly mirrors the towering Chaukhamba peaks. This sacred lake is deeply rooted in Mahabharata legends and offers one of the most pristine reflections in the Himalayas.</p>
+        .calendar-header,
+        .calendar-row {
+            padding: 1rem !important;
+        }
+    }
 
-            <h3>Mythological Significance:</h3>
-            <ul>
-                <li>Featured in the Mahabharata epic</li>
-                <li>Site where Yaksha tested the wisdom of the Pandavas</li>
-                <li>Yudhishthira answered the Yaksha's questions here</li>
-                <li>Sacred waters believed to have purifying properties</li>
-            </ul>
+    /* Hover Effects */
+    .calendar-row:hover {
+        background: var(--background-light);
+        transform: translateY(-2px);
+        transition: all 0.3s ease;
+    }
 
-            <h3>Natural Wonder:</h3>
-            <ul>
-                <li>Perfect mirror reflection of Chaukhamba peaks</li>
-                <li>Surrounded by dense oak and rhododendron forests</li>
-                <li>Alpine meadows with seasonal wildflowers</li>
-                <li>Crystal clear waters throughout the year</li>
-            </ul>
+    .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 25px rgba(92, 141, 118, 0.3);
+    }
 
-            <h3>The Trek:</h3>
-            <ul>
-                <li>3km gentle trek through forest trails</li>
-                <li>Well-marked path suitable for all fitness levels</li>
-                <li>Gradual ascent through diverse ecosystems</li>
-                <li>Opportunities for bird watching and photography</li>
-            </ul>
+    .accordion-item:hover {
+        box-shadow: var(--shadow-medium);
+        border-color: var(--primary-light);
+    }
 
-            <h3>Best Experience:</h3>
-            <p>Early morning visits offer the most spectacular reflections when the lake surface is completely still, creating a perfect mirror image of the surrounding peaks. The serene atmosphere makes it ideal for meditation and contemplation.</p>
-        </div>
-    </div>
-</div>
-
-<div id="kartikSwamiModal" class="modal">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h2>Kartik Swami Temple</h2>
-            <span class="close" onclick="closeModal('kartikSwamiModal')">&times;</span>
-        </div>
-        <div class="modal-body">
-            <h3>Only Temple Dedicated to Lord Kartikeya in Uttarakhand</h3>
-            <p>Perched at 3,050 meters, Kartik Swami Temple is the only temple in Uttarakhand dedicated to Lord Kartikeya (also known as Murugan). This sacred hilltop shrine marks the legendary site of supreme devotion and sacrifice.
-
-            <h3>Divine Legend:</h3>
-            <ul>
-                <li>Site where Kartikeya offered his bones to Lord Shiva</li>
-                <li>Represents ultimate devotion and sacrifice</li>
-                <li>Lord Kartikeya is the commander of the gods' army</li>
-                <li>Son of Lord Shiva and Goddess Parvati</li>
-            </ul>
-
-            <h3>Unique Features:</h3>
-            <ul>
-                <li>Only Kartikeya temple in the entire state</li>
-                <li>360-degree panoramic mountain views</li>
-                <li>Ancient stone architecture</li>
-                <li>Peaceful hilltop location away from crowds</li>
-            </ul>
-
-            <h3>The Trek Experience:</h3>
-            <ul>
-                <li>3km moderate trek through rugged mountain paths</li>
-                <li>Elevation gain through alpine terrain</li>
-                <li>Stunning views throughout the journey</li>
-                <li>Final approach offers breathtaking vistas</li>
-            </ul>
-
-            <h3>Panoramic Views:</h3>
-            <p>From the temple, devotees can witness stunning views of major Himalayan peaks including Chaukhamba, Nanda Devi, Kedarnath, and Bandarpunch. The temple's elevated position provides one of the best viewpoints in the region.</p>
-
-            <h3>Spiritual Significance:</h3>
-            <p>Devotees believe that prayers offered at this remote temple are especially powerful due to Lord Kartikeya's role as the divine warrior and protector. The temple's isolation adds to its spiritual intensity and meditative atmosphere.</p>
-        </div>
-    </div>
-</div>
+    .feature-list-item:hover {
+        transform: translateX(5px);
+        transition: all 0.3s ease;
+    }
+</style>
 
 <!-- JavaScript for modal and accordion functionality -->
 <script>

@@ -132,8 +132,8 @@
             <h3>Contact Us</h3>
             <p>For questions or concerns regarding this policy:</p>
             <div class="contact-item" style="justify-content: center; margin-top: 1rem;">
-                <i class="fas fa-envelope"></i>
-                <span>adisheshyoga@gmail.com</span>
+                <i class="fas fa-envelope" style="color: #044424;"></i>
+                <span style="color: #044424;">adisheshyoga@gmail.com</span>
             </div>
         </div>
 

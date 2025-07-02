@@ -247,7 +247,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Enhanced Team Slider with Touch Support and Infinite Loop
   const teamTrack = document.querySelector(".team-track")
-  const teamCards = document.querySelectorAll(".team-card:not(.clone)")
   const teamDots = document.querySelectorAll(".team-dots .dot")
   const teamPrev = document.querySelector(".team-slider .slider-prev")
   const teamNext = document.querySelector(".team-slider .slider-next")

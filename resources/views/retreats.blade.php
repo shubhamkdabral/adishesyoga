@@ -61,7 +61,7 @@
                     </ul>
                     <a href="#" class="btn btn-primary">
                         <i class="fas fa-calendar-check"></i>
-                        <span>Book Now</span>
+                        <span>Apply Now</span>
                     </a>
                 </div>
             </div>
@@ -320,7 +320,7 @@
                     </ul>
                     <a href="#" class="btn btn-primary">
                         <i class="fas fa-calendar-check"></i>
-                        <span>Book Now</span>
+                        <span>Apply Now</span>
                     </a>
                 </div>
             </div>

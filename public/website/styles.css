@@ -6,9 +6,9 @@
 }
 
 :root {
-  --primary-color: #5c8d76;
+  --primary-color: #044424;
   --primary-light: #7ba994;
-  --primary-dark: #3e6b54;
+  --primary-dark: #1c5c3c;
   --secondary-color: #a4c3b2;
   --accent-color: #f6bd60;
   --text-dark: #2c3e50;
@@ -1919,7 +1919,6 @@ footer {
 }
 
 .team-card {
-  flex: 0 0 300px;
   background: var(--background-light);
   border-radius: 15px;
   overflow: hidden;
@@ -4162,3 +4161,4 @@ html {
     margin-bottom: 1rem;
   }
 }
+
