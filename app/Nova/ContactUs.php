@@ -2,8 +2,11 @@
 
 namespace App\Nova;
 
+use Ebess\AdvancedNovaMediaLibrary\Fields\Media;
 use Illuminate\Http\Request;
 use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Fields\Text;
+use Laravel\Nova\Fields\Trix;
 use Laravel\Nova\Http\Requests\NovaRequest;
 
 class ContactUs extends Resource
@@ -41,6 +44,29 @@ class ContactUs extends Resource
     {
         return [
             ID::make()->sortable(),
+
+            Text::make('Banner Title')->rules('required', 'max:255'),
+            Text::make('Banner Heading')->rules('required', 'max:255'),
+            Trix::make('Banner Short Description')->rules('nullable'),
+
+            Text::make('Title')->rules('required', 'max:255'),
+            Trix::make('Short Description')->rules('nullable'),
+
+            Text::make('Phone')->rules('required', 'max:20'),
+            Text::make('Email')->rules('required', 'email', 'max:255'),
+
+            Trix::make('Google Map Embed Code', 'google_map')->alwaysShow(),
+
+            Text::make('Facebook')->rules('nullable', 'url'),
+            Text::make('Instagram')->rules('nullable', 'url'),
+            Text::make('YouTube')->rules('nullable', 'url'),
+            Text::make('LinkedIn', 'linkdedin')->rules('nullable', 'url'),
+            Text::make('X (Twitter)', 'x')->rules('nullable', 'url'),
+
+            Media::make('Banner Image', 'banner')
+                ->disk('public')
+                ->path('contact-us')
+                ->rules('nullable', 'image', 'max:2048'),
         ];
     }
 
