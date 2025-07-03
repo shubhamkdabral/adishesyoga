@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Nova\AboutUs;
+use App\Nova\ContactUs;
 use App\Nova\FoodStay;
 use App\Nova\FoodStayTitle;
 use App\Nova\Founder;
@@ -130,6 +131,10 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
                 MenuSection::make('Food & Accommodation', [
                     MenuItem::resource(FoodStayTitle::class),
                     MenuItem::resource(FoodStay::class),
+                ])->icon('shield-check')->collapsable(),
+
+                MenuSection::make('Contact Us', [
+                    MenuItem::resource(ContactUs::class),
                 ])->icon('shield-check')->collapsable(),
             ];
         });
