@@ -73,4 +73,9 @@ class Retreat extends Model implements HasMedia
     {
         return $this->hasMany(RetreatNearBy::class);
     }
+
+    public function calendar()
+    {
+        return $this->hasMany(RetreatCalendar::class);
+    }
 }

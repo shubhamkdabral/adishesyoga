@@ -45,7 +45,7 @@
                        </li>
 
                        <li class="nav-dropdown">
-                           <a href="#" class="dropdown-toggle {{ in_array(Route::currentRouteName(), ['who-we-are', 'food-and-accommodation']) ? 'active' : '' }}">
+                           <a href="#" class="dropdown-toggle {{ in_array(Route::currentRouteName(), ['himalayan-hiking', 'kundalini-yoga','hatha-yoga']) ? 'active' : '' }}">
                                Retreat Programs
                                <i class="fas fa-chevron-down dropdown-arrow"></i>
                            </a>

@@ -109,6 +109,8 @@ class Retreat extends Resource
             HasMany::make('Food & Accommodation', 'foodNdAcc', FoodAndAcc::class),
 
             HasMany::make('Nearby Places', 'nearBy', RetreatNearBy::class),
+
+            HasMany::make('Calendar', 'calendar', RetreatCalendar::class),
         ];
     }
 

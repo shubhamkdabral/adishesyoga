@@ -73,7 +73,7 @@
                     @endforeach
                 </div>
                 <p>{{ Str::limit(trim(strip_tags(html_entity_decode($about->description))), 160) }}</p>
-                <a href="{{ $about->learn_more_url ?? '#' }}" class="btn btn-primary">
+                <a href="{{ route('who-we-are') }}" class="btn btn-primary">
                     <i class="fas fa-arrow-right"></i>
                     <span>Learn More About Us</span>
                 </a>

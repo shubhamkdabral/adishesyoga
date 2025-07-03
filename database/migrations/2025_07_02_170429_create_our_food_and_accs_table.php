@@ -11,22 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('contact_us', function (Blueprint $table) {
+        Schema::create('our_food_and_accs', function (Blueprint $table) {
             $table->id();
             $table->string('banner_title');
             $table->string('banner_heading');
             $table->string('banner_short_description');
             $table->string('title');
             $table->string('short_description');
-            $table->string('phone');
-            $table->string('email');
-            $table->text('google_map');
-            $table->string('facebook');
-            $table->string('instagram');
-            $table->string('youtube');
-            $table->string('linkdedin');
-            $table->string('x');
-            $table->timestamps();
+            $table->text('description');
         });
     }
 
@@ -35,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('contact_us');
+        Schema::dropIfExists('our_food_and_accs');
     }
 };

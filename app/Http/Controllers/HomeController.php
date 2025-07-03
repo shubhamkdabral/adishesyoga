@@ -24,7 +24,7 @@ class HomeController extends Controller
         $whyChooseUs = WhyChooseUs::get();
         $stays = Stays::with('media')->get();
         $reviews = Reviews::with('media')->get();
-        $ourteam = OurTeam::with('media')->get();
+        $ourteam = OurTeam::with('media')->where('type', 'teacher')->get();
 
 
         return view('index', compact(

@@ -2,13 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ContactUs as ModelsContactUs;
 use Illuminate\Http\Request;
 
 class ContactUs extends Controller
 {
     public function index()
     {
-        return view('privacy-policy');
+        $contactUs = ModelsContactUs::with('media')->first();
+        return view('contact-us', compact('contactUs'));
     }
 
     public function privacyPolicy()
