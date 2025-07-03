@@ -34,7 +34,7 @@ class NovaServiceProvider extends NovaApplicationServiceProvider
     public function boot()
     {
         parent::boot();
-        // $this->customMenu();
+        $this->customMenu();
     }
 
     /**
